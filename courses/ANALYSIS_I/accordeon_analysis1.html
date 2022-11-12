@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- edge compatibility  -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    
+    <!-- Style file : -->
+    <link rel="stylesheet" href="accordion_style/accordion_style.css">
+    <title>Algebra II</title>
+    <!-- <script> <scr src="accordion_style/accordion_java.js"></script> -->
+    <!--<link rel="stylesheet" href="accordion_style/accordion_style.css">-->
+    <style>
+        .rounded-button { 
+            width = 80px;
+            height = 80px;
+            background-color: darkgoldenrod;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 90%;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="../../index.html" class="rounded-button"> <ion-icon name="home-sharp" size="large"> </ion-icon> </a>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <div class="container">
+        <h1 class="heading-primary">Analysis I</h1>
+        <div class="accordion">
+        <dl>
+            <dt> <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Groupes</a></dt>
+            <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
+                <p> Les fonctions à une seule variable est un outil important pour la modélisation des problèmes réelles qui prend en considération un élément en entrée (input) et une valeur en sortie (output). Pour celàa il faut bien définir une fonction réelle ainsi que son domaine de définition, parité, limites, continuité etc.</p>
+                <ul>
+                    <li><a href="quiz01.html">Introduction : Logique et Ensembles </a></li>
+                    <li><a href="groupes-anneaux-sq02.pdf"> Groupe Symétrique </a></li>
+                    <li><a href="morphisme.html"> Morphisme de groupes</a></li>
+                </ul>
+            </dd>
+            <dt><a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionTitle js-accordionTrigger">Anneaux et corps</a></dt>
+            <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
+            <p> Un anneau est une continuation naturelle de ce qu'on a vu par rapport aux groupes. On cherche une structure qui fait appelle à deux lois de composition internes. </p>        
+            </dd>
+            <dt><a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">Polynômes et Fractions</a></dt>
+            <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
+                <p> L'étude des polynômes et des fractions permet de mettre en évidence la force du formalisme abstrait et de jouer un peu avec les notions de l'arithmétique dans un cadre plus général </p>
+                <ul>
+                    <li><a href="polynomes-01.pdf"> Polynômes (Partie 01) </a></li>
+                    <li><a href="groupes-anneaux-sq02.pdf"> Polynômes (Partie 02) </a></li>
+                    <li><a href="poly01.html"> Quiz : Polynômes </a></li>
+                    <li><a href="fractions_rationnelles-01.pdf"> Fractions Rationnelles </a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <script src="accordion_style/accordion_java.js" type="text/javascript"></script>
+</body>
+</html>
+
+<!--   <ion-icon name="home-sharp"></ion-icon> -->
