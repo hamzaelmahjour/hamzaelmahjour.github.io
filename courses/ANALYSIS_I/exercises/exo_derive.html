@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Les dérivées</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+  <h1>Les dérivées</h1>
+  <p>Trouver la bonne dérivée de chaque fonction : notez qu'il faut utiliser les symboles (+,-,*,/) et bien place les paranthèses!</p>
+  <form method="POST">
+    <p id="exo_derive">{{ exercise }}</p>
+    <input type="text" name="exo_derive" id="solution" placeholder="Tapez votre réponse ici">
+    <input type="submit" value="Check">
+  </form>
+  {% if solution %}
+    <p>{{ solution }}</p>
+  {% endif %}
+  <!--script src="{{ url_for('static', filename='exo_derive.js') }}"></script> -->
+  <script defer="" crossorigin="anonymous" src="https://cdn.kastatic.org/genwebpack/prod/en/2VOD.23031e93d55a95bef7ee.js"></script>
+</body>
+</html>
