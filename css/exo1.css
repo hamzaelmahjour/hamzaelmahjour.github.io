@@ -1,0 +1,13 @@
+var problems = [
+  { problem: "Find the value of x in the equation 2x + 3 = 7.", answer: "2" },
+  { problem: "Solve the quadratic equation x^2 + 5x + 6 = 0.", answer: "(-2, -3)" },
+  // Add more problems here
+];
+
+// Select a random problem from the list
+var problemIndex = Math.floor(Math.random() * problems.length);
+var problem = problems[problemIndex].problem;
+var answer = problems[problemIndex].answer;
+
+// Display the problem
+document.getElementById("problem").innerHTML = problem;
