@@ -1,0 +1,10 @@
+#math-container {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+#result {
+    font-weight: bold;
+    margin-top: 20px;
+  }
