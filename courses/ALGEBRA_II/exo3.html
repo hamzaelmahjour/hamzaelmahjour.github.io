@@ -1,0 +1,90 @@
+&<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Solve the following equations</title>
+
+   <!-- Css Link -->
+   <link rel="stylesheet" href="/css/exo3.css">
+</head>
+<body>
+
+   <!-- Main Container -->
+   <div class="main-container">
+      <div class="main">
+         
+         <!-- Heading -->
+         <h1>First Order equation <span> Quiz Game :)</span></h1>
+
+         <!-- Main Box -->
+         <div class="main-box">
+            <div class="show-anwser"><span id="ans"></span></div>
+
+            <div class="box1">
+               <div class="box-col">
+                  <input type="textf" id="intext" class="intext11">
+               </div>
+
+               <div class="add-s">
+                  <p> X + </p>
+               </div>
+
+                <div class="box-col">
+                  <input type="textf" id="intext1" class="intext11">
+               </div>
+
+            </div>
+
+            <!-- text input -->
+            <div class="box2">
+               <input type="text" id="intext2">
+            </div>
+
+            <div class="add-s">
+               <p> = 0 </p>
+            </div>
+
+            <!-- button -->
+             <div class="box2">
+               <button class="btn" onclick="Game()"> Check Anwser</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script>
+      let a = Math.floor(Math.random()*20+1);
+      let b = Math.floor(Math.random()*20+1);
+
+      document.getElementById("intext").value = a ;
+      document.getElementById("intext1").value = b;
+
+      let sol = -b/a;
+
+      function Game(){
+         var user= document.getElementById("intext2").value;
+
+         if( user == sol){
+            document.getElementById("ans").innerHTML = "Well Done! Your Answer is Correct";
+         }else{
+             document.getElementById("ans").innerHTML = "Correct Answer " + sol + " . Try Again";
+         }
+
+           var user= document.getElementById("intext2").value = "";
+
+
+      a = Math.floor(Math.random()*20+1);
+      b = Math.floor(Math.random()*20+1);
+
+      document.getElementById("intext").value = a;
+      document.getElementById("intext1").value = b;
+
+      sol = -b/a;
+
+
+      }
+   </script>
+
+</body>
+</html>
