@@ -5,89 +5,16 @@
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/img/book.png" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link rel="stylesheet" href="./css/bookshelf.css" />
-        <style>
-            body {
-              background-image: url('./assets/img/library_wood2.png');
-            }
-        </style>
+        <link rel="stylesheet" href="./css/booklet_style.css" />
     </head>
     <body>
         <div class="bookshelf">
-            <div class="book">
-                <div class="side spine">
-                    <span class="spine-title"> Rappels sur la théorie de ensembles</span>
-                    <span class="spine-author"> <a href="./Books/Ensembles.pdf" download="ENS_rapl"> ENS </a>  </span>
-                </div>
-                <div class="side top"></div>
-                <div class="side cover" style= "background-image: url('Books/rappels-ensembles.png') ; height: 235px; top: 45px;"> </div>
-            </div>
-            <div class="book">
-                <div class="side spine">
-                    <span class="spine-title"> Algèbre II - partie 1</span>
-                    <span class="spine-author"> <a href="./Books/ALGEBRE2-part1.pdf" download="ALG2_PART1"> ALG2 </a>  </span>
-                </div>
-                <div class="side top"></div>
-                <div class="side cover" style= "background-image: url('Books/alg2-part2.png') ; height: 235px; top: 45px;"> </div>
-            </div>
-            
-            <div class="book">
-                <div class="side spine">
-                    <span class="spine-title"> Algèbre II - partie 2</span>
-                    <span class="spine-author"> <a href="./Books/ALGEBRE2-part2.pdf" download="ALG2_PART2"> ALG2 </a>  </span>
-                </div>
-                <div class="side top"></div>
-                <div class="side cover" style= "background-image: url('Books/alg2-part2.png') ; height: 235px; top: 45px;"> </div>
-            </div>
-            
-            <div class="book">
-                <div class="side spine">
-                    <span class="spine-title"> Analyse I - partie 1</span>
-                    <span class="spine-author"> <a href="./Books/Chapitre01.pdf" download="ANA1_PART1"> ANA1 </a> </span>
-                </div>
-                <div class="side top"></div>
-                <div class="side cover" style= "background-image: url('Books/ana1-part1.png') ; height: 235px; top: 45px;"></div>
-
-            </div>    
-            <div class="book">
-                <div class="side spine">
-                    <span class="spine-title"> Analyse I - partie 2</span>
-                    <span class="spine-author"> <a href="./Books/Chapitre02.pdf" download="ANA1_PART2"> ANA1 </a> </span>
-                </div>
-                <div class="side top"></div>
-                <div class="side cover" style= "background-image: url('Books/ana1-part2.png') ; height: 235px; top: 45px;"></div>
-
-            </div>
-
-            <div class="book">
-                <div class="side spine">
-                    <span class="spine-title"> Les Probabilités</span>
-                    <span class="spine-author"> <a href="./Books/proba_cours_2eme.pdf" download="PROBA"> PROB </a> </span>
-                </div>
-                <div class="side top"></div>
-                <div class="side cover" style= "background-image: url('Books/proba.png') ; height: 235px; top: 45px;"></div>
-
+            <div class="books"> 
+                <div class="book" style="--bg-image: url(Books/alg2-part1.png);"></div>
+                <div class="book" style="--bg-image: url(Books/alg2-part2.jpg);"></div>
+                <div class="book" style="--bg-image: url(Books/alg2-part1.png);"></div>
+                <div class="book" style="--bg-image: url(https://i.ibb.co/9GdsVj7/43263520-SY475.jpg);"></div>
             </div>
         </div>
-        <div style="margin-top: 70px;"></div>
-        <div class="bookshelf">
-            <div class="book">
-                <div class="side spine">
-                    <span class="spine-title"> TD - EXAMENS - ANALYSE </span>
-                    <span class="spine-author"> <a href="./Books/td_exam_analyse.pdf" download="td_analyse_exam"> EXO1 </a> </span>
-                </div>
-                <div class="side top"></div>
-                <div class="side cover" style= "background-image: url('Books/analyse_td_exam.png') ; height: 235px; top: 45px;"></div>
-            </div>
-            <div class="book">
-                <div class="side spine">
-                    <span class="spine-title"> TD - EXAMENS - ANALYSE </span>
-                    <span class="spine-author"> <a href="./Books/td_exam_algebre2.pdf" download="td_analyse_exam"> EXO2 </a> </span>
-                </div>
-                <div class="side top"></div>
-                <div class="side cover" style= "background-image: url('Books/algebre_td_exam.png') ; height: 235px; top: 45px;"></div>
-            </div>
-        </div>
-        <script type="module"  src="js/bookshelf.js"> </script>
     </body>
 </html>
