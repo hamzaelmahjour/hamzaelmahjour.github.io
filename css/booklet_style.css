@@ -63,7 +63,9 @@ body {
   }
   
   .book {
-    --bg-image: url("https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1581128232l/50214741.jpg");
+    /*--bg-image: url("https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1581128232l/50214741.jpg");*/
+    /*--bg-image: url("Books/alg2-part1.jpg");*/
+    --bg-image: url("/css/alg2-part2.jpg");
     width: 100%;
     border-radius: 3px 0.5px 0.5px 3px;
     aspect-ratio: 115/180;
