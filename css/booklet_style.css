@@ -12,7 +12,7 @@ body {
   }
   
   .bookshelf {
-    max-width: 1000px;
+    max-width: 1920px;
     width: 80%;
     display: flex;
     justify-content: center;
