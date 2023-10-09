@@ -1,91 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap");
-body {
-  background-color: #750400;
+
+* {
   margin: 0;
-
-  background-image: url("https://media.freestocktextures.com/cache/ee/a7/eea7053352caf594e5ab1a7c3667e75d.jpg");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-}
-
-.imgct {
-  overflow: hidden;
-  margin-right: 0px;
-  margin-left: 23px;
-  margin-top: 0px;
-  float: left;
-  position: absolute;
-}
-
-.imgct img {
-  /*! grid-area: image; */
-  position: relative;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 60px;
-  border: 3px solid #fff;
-  float: left;
-}
-
-.bookshelf {
-  width: 900px;
-  margin: 5rem auto;
-  text-align: center;
-  position: relative;
-}
-
-.bookshelf.first {
-  margin-top: 150px;
-}
-
-.book-grid {
-  z-index: 2;
-  position: relative;
-  -webkit-transform: translateY(-15px);
-  transform: translateY(-15px);
-}
-.book-grid ul {
-  list-style: none;
   padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.book-grid ul li {
-  justify-self: center;
-}
-.book-grid ul img {
-  display: block;
-  box-shadow: 3px 5px 18px 2px rgba(0, 0, 0, 0.6);
-  width: 200px;
-  height: 300px;
-  -o-object-fit: cover;
-  object-fit: cover;
+  box-sizing: border-box;
 }
 
-.shelf-shadows {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1rem;
-  border-radius: 2px;
-  z-index: 1;
-  box-shadow: 0px -5px 3px 0px rgba(170, 170, 170, 0.2),
-    0px 15px 20px 0px rgba(39, 3, 3, 0.83),
-    0px 5px 5px 0px rgba(119, 119, 119, 0.3);
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
 }
 
-.shelf {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1rem;
-  background-color: #f9f9f9;
-  border-radius: 2px;
-  z-index: 3;
-}
 .square {
   position: relative;
   width: 150px;
