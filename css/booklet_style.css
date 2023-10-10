@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap");
 body {
-  background-color: #750400;
+  background-color: #fdfafa;
   margin: 0;
 
-  background-image: url("https://media.freestocktextures.com/cache/ee/a7/eea7053352caf594e5ab1a7c3667e75d.jpg");
+  background-image: url("https://media.freestocktextures.com/cache/2b/4d/2b4dd6cf446cebf96bac7d0b85eb476c.jpg");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
@@ -169,7 +169,7 @@ body {
   display: inline-block;
   margin-top: 4px;
   text-decoration: none;
-  color: #fff;
+  color: #000000;
   font-weight: 800;
   font-size: 30px;
   font-family: "Indie Flower", sans-serif;
