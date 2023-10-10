@@ -11433,3 +11433,7 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+.special-link {
+  text-decoration: none; /* Remove the underline */
+  color: inherit; /* Inherit the text color from the parent */
+}
