@@ -31,4 +31,20 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    
+      // JavaScript code to fetch and update the visitor count
+      function updateCounter() {
+        fetch('get_visitor_count.php')
+            .then(response => response.text())
+            .then(count => {
+                document.getElementById('counter').textContent = count;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+
+    // Update the counter initially and then every 5 seconds
+    updateCounter();
+    setInterval(updateCounter, 5000);
 });
