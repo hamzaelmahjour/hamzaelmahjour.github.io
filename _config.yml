@@ -40,7 +40,7 @@ paginate_path: /page:num/
 timezone: Africa/Casablanca
 # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-favicon: assets/images/favicon1.ico
+favicon: assets/images/favicon.ico
 include:
   - _pages
   - _teaching
