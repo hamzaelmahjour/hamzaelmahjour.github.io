@@ -13,28 +13,38 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
-email:
+title: Prof. El Mahjour
+url: "https://hamzaelmahjour.github.io"  # ← ADD THIS
+baseurl: ""                   # ← ADD THIS
+email: h.elmahjour@uae.ac.ma
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
+  Welcome to my personal website. I am a Mathematics Professor and researcher passionate about both advancing mathematical knowledge and making it accessible to others. This space is dedicated to sharing my academic journey, ongoing research projects, and published work, as well as offering a wide range of carefully curated resources for students. Whether you're looking for lecture notes, video tutorials, or insights into current mathematical topics, my goal is to support your learning, spark curiosity, and contribute to a deeper understanding of mathematics at all levels.
+twitter_username: PrHamzaElMahjour
+github_username: hamzaelmahjour
+minimal_mistakes_skin: "mint"
 search: true
 
+
+masthead_title: false  # Disables text title in header
 # Build settings
 markdown: kramdown
+
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Africa/Casablanca
+# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
+favicon: assets/images/favicon1.ico
 include:
   - _pages
+  - _teaching
+  - _research
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -58,19 +68,19 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name   : "Hamza El Mahjour"
+  avatar : "assets/images/bio-photo3.jpg"
+  bio    : "I am a professor and I love teaching mathematics. I also do some research by applying math on epidemic models."
   links:
-    - label: "Website"
+    - label: "ENSAT Affiliation"
       icon: "fas fa-fw fa-link"
-      url: "https://"
+      url: "https://ensat.ac.ma/Portail/liste-des-enseignant-du-departement-sic/"
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      icon: "fab fa-fw fa-x-twitter"
+      url: "https://x.com/PrElMahjour"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/hamzaelmahjour"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
@@ -78,19 +88,28 @@ author:
 footer:
   links:
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      icon: "fab fa-fw fa-x-twitter"
+      url: "https://x.com/PrElMahjour"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/hamzaelmahjour"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
 
 defaults:
+  # _research
+    #enable math for _research .md files
+  - scope:
+      path: "_research"
+      type : research
+    values:
+      layout: single
+      math: true
+      hide_title: true 
   # _posts
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
       layout: single
@@ -113,3 +132,20 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+  
+collections:
+  research:
+    output: true
+    permalink: /research/:title/
+  teaching:
+    output: true
+    permalink: /teaching/:title/
+
+
+google_analytics: UA-XXXXXXXXX-X  # Replace with your real tracking ID
+
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "your-disqus-shortname"
+

@@ -1,0 +1,48 @@
+- title: "Mathematics Fighting Crime"
+  id: "1075693713"
+  thumbnail: "https://i.vimeocdn.com/video/2005340100-23a891dec457bc71426c96bf6e3ea2600a4e36d7ba7443e5d8b1ddae468ba98b-d_480x320"
+  description: "A talk about the importance of using mathematics to fight crime from various aspects!"
+
+- title: "New Trend Videos"
+  id: "894439964"
+  thumbnail: "https://i.vimeocdn.com/video/2005377190-f594b10c4759deb08a65c8ee144e807f9c5657e7e7932a313f63f803b605b45e-d_480x320"
+  description: "A serious first attempt to create videos using MANIM"
+
+- title: "Optimisation sans contraintes"
+  id: "880412679"
+  thumbnail: "https://i.vimeocdn.com/video/1747404462-209a650e442c883b10eaf7b7b923e38ad6541e1144b7650b9e342c53d0783d8b-d_480x320"
+  description: "Une vidéo avec des animations d'un concept mathématique classique, destiné aux étudiants qui découvrent ce principe la première fois."
+
+- title: "Échantillonnage 1"
+  id: "782175995"
+  thumbnail: "https://i.vimeocdn.com/video/1570291243-34a65b5cd03808e05025bbb6fc75811a036b2db1f44f2f4c2ebfca4ce652a4dd-d_480x320"
+  description: "Variabilité d'échantillonnage - Partie 1"
+
+- title: "Échantillonnage 2"
+  id: "782176808"
+  thumbnail: "https://i.vimeocdn.com/video/1570292779-a112ad6dc19fd650b46e9f27af534451319abba0c42e943a74ab458acd4856b0-d_480x320"
+  description: "Variabilité d'échantillonnage - Partie 2"
+ 
+- title: "Échantillonnage 3"
+  id: "782179419"
+  thumbnail: "https://i.vimeocdn.com/video/1570299285-1a472692c656d1224b45c82a0ca33007c41e882a9279c492aa65e5559506c14b-d_480x320"
+  description: "Variabilité d'échantillonnage - Partie 3"
+
+- title: "Échantillonnage 4"
+  id: "782396201"
+  thumbnail: "https://i.vimeocdn.com/video/1570858463-211b2368a0964fee52863e64d4951da0f5ad43c439254da3c8511566cc5d853a-d_480x320"
+  description: "Variabilité d'échantillonnage - Partie 4"
+  
+  
+- title: "Rappels: Algèbre Linéaire "
+  id: "508531382"
+  thumbnail: "https://i.vimeocdn.com/video/1052508687-e0894ce6050b8a4ee76f3bd9266c9ee0ee45ccbc9d7fbbf903c0841cfef159cc-d_480x320"
+  description: "Espaces vectoriels, famille libre/liée, génératrice ..."
+
+- title: "Rappels: Polynômes et Fractions Rationelles"
+  id: "509174364"
+  thumbnail: "https://i.vimeocdn.com/video/1053931231-b1a029e42a76278d1c8d6085f8a3886733cf5852866b574150df979a5ff6a276-d_480x320"
+  description: "Polynômes, racines, pôles , réduction en éléments simples ..."
+  
+
+

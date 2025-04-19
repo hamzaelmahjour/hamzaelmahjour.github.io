@@ -7,6 +7,6 @@ tags:
   - quote
 ---
 
-> Only one thing is impossible for God: To find any sense in any copyright law on the planet.
+> Only one thing is impossible for God: To have any type of weakness.
   
-> <cite><a href="http://www.brainyquote.com/quotes/quotes/m/marktwain163473.html">Mark Twain</a></cite>
+> <cite><a href="https://www.islamestic.com/i-am-feeling/">Islamestic</a></cite>
