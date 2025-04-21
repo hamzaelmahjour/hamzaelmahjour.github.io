@@ -3,7 +3,7 @@ layout: splash
 title: "Welcome"
 permalink: /
 header:
-  overlay_image: ./assets/header/mathematics-numbers.gif
+  overlay_image: ./assets/header/mandala.gif
   overlay_filter: 0.3
   overlay_full: true
   actions:
