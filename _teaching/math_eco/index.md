@@ -9,7 +9,7 @@ header:
 ---
 ### Fonctions réelles, fonctions à plusieurs variables, calcul matriciel ...
 
-| Séquence | Slides | Exercises | Correction |
+| Séquence | Slides | Exercices | Correction |
 |------|-------|-----------|------------|
 | 0 | [Ensembles](../../assets/resources/math_eco/parts/calcul_limites.pdf) | [TD1](../../assets/resources/math_eco/TD/TD1.pdf) | [Corrigé 1](../../assets/resources/math_eco/TD/corrige_TD1.pdf) |
 | 1 | [Fonctions](../../assets/resources/math_eco/parts/chapitre01-slides.html) | — | — |
@@ -19,6 +19,14 @@ header:
 | 5 | [Fonctions multivariables](../../assets/resources/math_eco/parts/fonctions_multi.pdf) | — | — |
 | 6 | [Optimisation 1](../../assets/resources/math_eco/parts/optimisation_multivariables.pdf) | — | — |
 | 7 | [Optimisation 2](../../assets/resources/math_eco/parts/main_function_lagrange.pdf) | — | — |
+
+### Interactive quizes
+
+| Quiz | Link |
+|----|----|
+| Domaines de définition et intervalles | [Quiz 1](../../assets/resources/math_eco/QUIZ/entainement01.html) |
+| Intégrales 1 | [Quiz 2](../../assets/resources/math_eco/QUIZ/quiz_integrale01.html) |
+| Intégrales 2 | [Quiz 3](../../assets/resources/math_eco/QUIZ/quiz_integrale02.html) |
 
 ### Archive des Examens et TDs
 - [Examen 2025](../../assets/resources/math_eco/exams/EXAM_MATHEMATIQUES_SG2024_2025.pdf) | [Rattrapage 2025](../../assets/resources/math_eco/exams/RATT_MATHEMATIQUES_SG2024_2025.pdf) |
