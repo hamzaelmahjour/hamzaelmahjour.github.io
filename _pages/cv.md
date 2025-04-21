@@ -21,7 +21,6 @@ classes: wide
       <li><i class="fas fa-envelope"></i> h.elmahjour@uae.ac.ma</li>
       <li><i class="fas fa-phone"></i> +212 539.39.37.43</li>
       <li><i class="fas fa-map-marker-alt"></i> Tangier, Morocco</li>
-      <!-- Add more contact info as needed -->
     </ul>
   </div>
 </div>
@@ -124,6 +123,7 @@ classes: wide
         <p>French (Fluent)</p>
         <p>English (Fluent)</p>
         <p>Spanish (Intermediate)</p>
+        <p>Amazigh - Riffian (Basics)</p>
       </div>
     </section>
 
@@ -131,8 +131,8 @@ classes: wide
       <h2>Interests</h2>
       <div class="cv-item">
         <p>Tennis</p>
-        <p>Chess</p>
-        <p>Reading Novels </p>
+        <p>Chess (Best Elo reached : 1806)</p>
+        <p>Reading Novels</p>
         <p>Historical Documentaries</p>
         <p>Interfaith Theological Debates</p>
       </div>
