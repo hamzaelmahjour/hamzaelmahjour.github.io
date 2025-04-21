@@ -17,7 +17,6 @@ header:
     <div class="video-item" data-id="{{ video.id }}">
       <div class="video-wrapper">
         <img src="{{ video.thumbnail }}" alt="{{ video.title }}">
-        <div class="play-icon">▶</div>
       </div>
       <h3>{{ video.title }}</h3>
       <p>{{ video.description }}</p>
