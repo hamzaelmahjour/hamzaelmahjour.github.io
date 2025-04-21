@@ -7,7 +7,7 @@ header:
     overlay_filter: 0.3    # Optional: darkens the image so text is readable
     overlay_full: true     # Optional: stretches the image full-width
 ---
-### Progression du cours
+### Ensembles, Structures algébriques, Polynômes ...
 
 | Séquence | Slides | Exercises | Correction |
 |------|-------|-----------|------------|

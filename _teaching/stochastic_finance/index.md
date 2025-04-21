@@ -7,7 +7,7 @@ header:
     overlay_filter: 0.3    # Optional: darkens the image so text is readable
     overlay_full: true     # Optional: stretches the image full-width
 ---
-### Progrès du cours
+### Mouvement Brownien, Intégrale d'Itô, Équations Différentielles Stochastiques ...
 
 | Séquence | Slides | Exercises | Correction |
 |------|-------|-----------|------------|

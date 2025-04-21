@@ -43,12 +43,12 @@ classes: wide
       <div class="cv-item">
         <h3>Bachelor's Degree</h3>
         <p class="cv-sub"> Pure Mathematics, University of Rennes 1, Rennes, France</p>
-        <p class="cv-date">2009-2011</p>
+        <p class="cv-date">2009 - 2011</p>
       </div>
       <div class="cv-item">
         <h3>Freshman Year at University</h3>
         <p class="cv-sub"> MIPC, FSTT, Tangier, Morocco</p>
-        <p class="cv-date">2008-2009</p>
+        <p class="cv-date">2008 - 2009</p>
       </div>
       <div class="cv-item">
         <h3>Baccalaureate</h3>
@@ -72,6 +72,24 @@ classes: wide
         <p class="cv-desc">Lecturer-Researcher</p>
       </div>
     </section>
+    <section class="cv-section">
+      <h2>Programming & Modeling</h2>
+       <div class="cv-item">
+        <h3>Numerical Simulation & Analysis</h3>
+        <p class="cv-sub">Matlab, Python (Jupyter Notebooks)</p>
+        <p class="cv-date">Epidemic models, ODE & parameter estimation, optimization on real‐world data</p>
+       </div>
+       <div class="cv-item">
+        <h3>Machine Learning & Neural ODEs</h3>
+        <p class="cv-sub">PyTorch (in progress)</p>
+        <p class="cv-date">Neural networks for parameter estimation & ODE solvers</p>
+       </div>
+       <div class="cv-item">
+        <h3>Animation & Visualization</h3>
+        <p class="cv-sub">Manim, Inkscape (SVG generation), KdenLive</p>
+        <p class="cv-date">Educational animations, video editing, vector graphics</p>
+       </div>
+     </section>
   </div>
 
   <div class="cv-right">
@@ -119,5 +137,28 @@ classes: wide
         <p>Interfaith Theological Debates</p>
       </div>
     </section>
+    <section class="cv-section">
+     <h2>Tools & Platforms</h2>
+      <div class="cv-item">
+        <h3>Document Preparation</h3>
+        <p class="cv-sub">LaTeX, Zotero, Obsidian</p>
+        <p class="cv-date">Academic papers, note-taking, reference management</p>
+      </div>
+      <div class="cv-item">
+        <h3>Operating Systems & Hardware</h3>
+        <p class="cv-sub">Linux (various distributions), Raspberry Pi</p>
+        <p class="cv-date">System customization, headless server setups</p>
+      </div>
+      <div class="cv-item">
+        <h3>Collaboration & Version Control</h3>
+        <p class="cv-sub">Git, Slack, Trello</p>
+        <p class="cv-date">Team workflow organization, code versioning</p>
+      </div>
+      <div class="cv-item">
+        <h3>Community & Outreach</h3>
+        <p class="cv-sub">Founder, Children’s Coding Club</p>
+        <p class="cv-date">Workshops in Scratch & basic programming</p>
+      </div>
+</section>
   </div>
 </div>

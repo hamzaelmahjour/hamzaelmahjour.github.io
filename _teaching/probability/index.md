@@ -8,7 +8,7 @@ header:
     overlay_full: true     # Optional: stretches the image full-width
 ---
 
-### Progrès du cours
+### Événements, probabilités conditionnelles, espérance ...
 
 | Séquence | Slides | Exercises | Correction |
 |------|-------|-----------|------------|
