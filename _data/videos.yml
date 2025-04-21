@@ -33,6 +33,15 @@
   thumbnail: "https://i.vimeocdn.com/video/1570858463-211b2368a0964fee52863e64d4951da0f5ad43c439254da3c8511566cc5d853a-d_480x320"
   description: "Variabilité d'échantillonnage - Partie 4"
   
+- title: "Échantillonnage 5"
+  id: "782396660"
+  thumbnail: "https://i.vimeocdn.com/video/1570859762-ff9928e58012871c1c83e5b6c4c0603d04dc83d30c629084d3ea177011c6e6bf-d_480x320"
+  description: "Variabilité d'échantillonnage - Partie 5"
+
+- title: "Échantillonnage 6"
+  id: "782397103"
+  thumbnail: "https://i.vimeocdn.com/video/1570860870-ad5a67d0dcc3abbe59b52dbeaeee5dc5b8344b78d56d6e93735113ab5e9beca5-d_480x32O"
+  description: "Variabilité d'échantillonnage - Partie 6"
   
 - title: "Rappels: Algèbre Linéaire "
   id: "508531382"
@@ -43,6 +52,7 @@
   id: "509174364"
   thumbnail: "https://i.vimeocdn.com/video/1053931231-b1a029e42a76278d1c8d6085f8a3886733cf5852866b574150df979a5ff6a276-d_480x320"
   description: "Polynômes, racines, pôles , réduction en éléments simples ..."
+  
   
 
 
