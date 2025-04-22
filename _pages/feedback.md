@@ -1,28 +1,33 @@
 ---
 layout: single
-title: "Leave Your Anonymous Feedback"
+title: "Leave Your Feedback"
 permalink: /feedback/
 ---
 
-We welcome your anonymous thoughts — on the teaching I make or the content created or this specific website.  
+Feel free to post a positive or a negative opinion about the way I teach, the contents on this website or anything else.
 Your comments help us improve!
 
 <!-- modify this form HTML and place wherever you want your form -->
 <form action="https://formspree.io/f/mzzrpoor" method="POST">
-  <fieldset>
-    <legend>I am a…</legend>
-    <label>
-      <input type="radio" name="role" value="Visitor" required>
-      Visitor
-    </label><br>
-    <label>
-      <input type="radio" name="role" value="Former Colleague">
-      Former Colleague
-    </label><br>
-    <label>
-      <input type="radio" name="role" value="Former Student">
-      Former Student
-    </label>
+  <fieldset style="border: none; padding: 0; margin-bottom: 1em;">
+    <legend style="font-weight: bold;">I am a…</legend>
+    
+    <div style="display: flex; gap: 1em; flex-wrap: wrap;">
+      <label style="display: flex; align-items: center; gap: 0.3em;">
+        <input type="radio" name="role" value="Visitor" required>
+        Visitor
+      </label>
+      
+      <label style="display: flex; align-items: center; gap: 0.3em;">
+        <input type="radio" name="role" value="Former Colleague">
+        Former Colleague
+      </label>
+
+      <label style="display: flex; align-items: center; gap: 0.3em;">
+        <input type="radio" name="role" value="Former Student">
+        Former Student
+      </label>
+    </div>
   </fieldset>
 
   <label for="message">Your feedback:</label><br>
