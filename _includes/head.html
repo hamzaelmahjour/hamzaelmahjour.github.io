@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon" />
+
 {% if site.google_analytics %}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MMQG077KJ"></script>
@@ -11,4 +12,14 @@
   gtag('config', 'G-0MMQG077KJ');
 </script>
 
-{% endif %}_
+{% endif %}
+
+
+{% if page.use_math and page.layout == single%}
+  <!-- MathJax -->
+  <script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+{% endif %}

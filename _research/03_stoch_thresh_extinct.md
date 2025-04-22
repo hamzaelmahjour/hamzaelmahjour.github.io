@@ -1,6 +1,8 @@
 ---
-title: "A stochastic threshold to predict extinction and persistence of an epidemic SIRS system with a general incidence rate (2021)"
-excerpt: "This work aims to give a detailed analysis of a stochastic epidemic model with a general incidence rate $g(S) I$ . We introduce ..."
+layout: single
+title: "A stochastic threshold to predict extinction and persistence of an epidemic SIRS system with a general incidence rate"
+use_math: true
+excerpt: "This work aims to give a detailed analysis of a stochastic epidemic model with a general incidence rate..."
 ---
 
 **Authors**: A Settati, A Lahrouz, M Zahri, A Tridane, M El Fatini, H El Mahjour and M Seaid.
@@ -10,4 +12,4 @@ excerpt: "This work aims to give a detailed analysis of a stochastic epidemic mo
 
 ## Reference  
 *Chaos, Solitons & Fractals* 144 (2021): 110690.
-DOI: [110.1016/j.chaos.2021.110690](https://doi.org/10.1016/j.chaos.2021.110690)  
+DOI: [110.1016/j.chaos.2021.110690](https://doi.org/10.1016/j.chaos.2021.110690)
