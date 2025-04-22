@@ -58,10 +58,10 @@ Your comments help us improve!
   <blockquote style="font-style: italic; background: #f9f9f9; padding: 1em; border-left: 4px solid #ccc;">
     “Un grand ami fiable, sérieux et sincère. Toujours prêt à collaborer scientifiquement!”
     <footer style="text-align: right; font-size: 0.9em;">— Former Colleague</footer>
+  </blockquote>
   <blockquote style="font-style: italic; background: #f9f9f9; padding: 1em; border-left: 4px solid #ccc;">
     “Svp peux tu donner le corrigé de tous les TDs,car il y a certains qui ne sont pas. ”
     <footer style="text-align: right; font-size: 0.9em;">— Former Student</footer>
-  </blockquote>
   </blockquote>
 </div>
 
