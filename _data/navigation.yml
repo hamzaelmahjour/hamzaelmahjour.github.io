@@ -5,9 +5,9 @@ main:
     url: /research/
   - title: "Teaching"
     url: /teaching/
-  - title: "Feedback"
-    url: /feedback/
   - title: "Videos"
     url: /videos/
   - title: "CV"
     url: /cv/
+  - title: "Feedback"
+    url: /feedback/
