@@ -48,6 +48,7 @@ include:
   - _pages
   - _teaching
   - _research
+font_awesome: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -76,17 +77,17 @@ author:
   bio    : "I am a professor and I love teaching mathematics. I also do some research by applying math on epidemic models."
   links:
     - label: "ENSAT Affiliation"
-      icon: "fas fa-fw fa-link"
+      icon: "fas fa-university"
       url: "https://ensat.ac.ma/Portail/liste-des-enseignant-du-departement-sic/"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-x-twitter"
+    - label: "X - Twitter"
+      icon: "fab fa-twitter"
       url: "https://x.com/PrElMahjour"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/hamzaelmahjour"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0002-7081-2114"
 
 footer:
   links:
