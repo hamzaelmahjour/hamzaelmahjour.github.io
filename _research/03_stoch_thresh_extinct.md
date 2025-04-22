@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "A stochastic threshold to predict extinction and persistence of an epidemic SIRS system with a general incidence rate"
+title: "A stochastic threshold to predict extinction and persistence of an epidemic SIRS system with a general incidence rate (2021)"
 use_math: true
 excerpt: "This work aims to give a detailed analysis of a stochastic epidemic model with a general incidence rate..."
 ---
