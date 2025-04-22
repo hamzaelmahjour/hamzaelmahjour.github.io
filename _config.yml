@@ -142,7 +142,7 @@ collections:
     permalink: /teaching/:title/
 
 
-google_analytics: UA-XXXXXXXXX-X  # Replace with your real tracking ID
+google_analytics: G-0MMQG077KJ  # Replace with your real tracking ID
 
 comments:
   provider: "disqus"
