@@ -1,13 +1,18 @@
 ---
-title: "Stochastique Appliquée à la Finance"
+title: "Calcul Stochastique : Théorie et Applications"
 layout: single
 permalink: /teaching/stochastic_finance/
 header:
     overlay_image: ../../assets/header/stock_market.gif
     overlay_filter: 0.3    # Optional: darkens the image so text is readable
     overlay_full: true     # Optional: stretches the image full-width
+    caption: " "  # Add an empty caption to avoid auto-pulling content
+description: "Your subtitle or header text (optional)"
 ---
+# Espérance conditionnelle, martingales, processus d'Itô ...
+
 ### Théorie de la mesure, espérance conditionnelle et martingales
+Ce cours est issu de deux modules différents, le premier mettant l'accent sur l'aspect théorie du calcul stochastique et nécessite une connaissance solide en théorie de la mesure et d'autres notions. Le deuxième module utilise l'approche stochastique pour modéliser le prix des actifs (Put/Call) et leurs variations.
 
 | Séquence | Slides |
 |------|-------|
