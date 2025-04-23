@@ -1,5 +1,5 @@
 ---
-title: "Videos Scientifiques et Pédagogiques"
+title: "Vidéos Scientifiques et Pédagogiques"
 layout: splash
 permalink: /videos/
 author_profile: false
