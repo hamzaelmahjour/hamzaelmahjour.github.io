@@ -3,35 +3,29 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
+  }
+
+  /* Category grouping */
+  .category-group {
+    margin-bottom: 40px; /* Space between categories */
+  }
+
+  .category-title {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db; /* Blue accent line */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+
+  /* Video grid for each category */
+  .video-items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
   }
 
-  .gallery-banner {
-    position: relative;
-    margin-bottom: 40px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .gallery-banner img {
-    width: 130%;
-    height: auto;
-    display: block;
-    filter: brightness(0.7);
-  }
-
-  .gallery-banner h1 {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-
+  /* Video item styling (unchanged) */
   .video-item {
     background: white;
     border-radius: 8px;
@@ -46,9 +40,10 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 
+  /* Thumbnail and text styling (unchanged) */
   .video-thumbnail {
     position: relative;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
+    padding-top: 56.25%;
     overflow: hidden;
   }
 
@@ -59,24 +54,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  .play-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3rem;
-    opacity: 0.8;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease;
-    pointer-events: none;
-  }
-
-  .video-item:hover .play-icon {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.1);
   }
 
   .video-item h3 {
@@ -91,13 +68,8 @@
   }
 
   @media (max-width: 768px) {
-    .video-gallery {
-      grid-template-columns: 1fr;
-    }
-
-    .gallery-banner h1 {
-      font-size: 2rem;
+    .video-items {
+      grid-template-columns: 1fr; /* Single column on mobile */
     }
   }
 </style>
-
