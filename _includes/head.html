@@ -1,35 +1,37 @@
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-<link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon" />
 <!-- _includes/head.html -->
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Add this line -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 {% if site.google_analytics %}
+<!-- Preconnect for Google domains -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.google-analytics.com">
+
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0MMQG077KJ"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', 'G-0MMQG077KJ');
+  gtag('config', '{{ site.google_analytics }}');
 </script>
-
 {% endif %}
 
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
 
-<!-- _includes/head.html -->
-{% if page.use_math and page.layout == "single" %}
-  <!-- Polyfill -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <!-- MathJax Config -->
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']]
-      }
-    };
-  </script>
-  <!-- MathJax Script -->
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% if page.use_math %}
+<!-- Polyfill -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<!-- MathJax Config -->
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<!-- MathJax Script -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 {% endif %}
