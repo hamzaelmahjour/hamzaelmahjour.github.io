@@ -1,6 +1,6 @@
 ---
-title: "Video Gallery"
-layout: single
+title: "Videos Scientifiques et Pédagogiques"
+layout: splash
 permalink: /videos/
 author_profile: false
 classes: wide
@@ -13,16 +13,25 @@ header:
 {% include video-gallery-style.html %}
 
 <div class="video-gallery">
-  {% for video in site.data.videos %}
-    <div class="video-item" data-id="{{ video.id }}">
-      <div class="video-wrapper">
-        <img src="{{ video.thumbnail }}" alt="{{ video.title }}">
+  {% for group in site.data.videos %}
+    <div class="category-group">
+      <h2 class="category-title">{{ group.category }}</h2>  <!-- Category heading -->
+      <div class="video-items">
+        {% for video in group.videos %}
+          <div class="video-item" data-id="{{ video.id }}">
+            <div class="video-wrapper">
+              <img src="{{ video.thumbnail }}" alt="{{ video.title }}">
+            </div>
+            <h3>{{ video.title }}</h3>
+            <p>{{ video.description }}</p>
+          </div>
+        {% endfor %}
       </div>
-      <h3>{{ video.title }}</h3>
-      <p>{{ video.description }}</p>
     </div>
   {% endfor %}
 </div>
+
+<!-- Keep the existing modal and script -->
 
 <!-- Modal for video playback -->
 <div id="video-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
