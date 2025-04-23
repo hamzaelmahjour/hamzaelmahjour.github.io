@@ -135,10 +135,5 @@ collections:
     permalink: /teaching/:title/
 
 
-google_analytics: G-0MMQG077KJ  # Replace with your real tracking ID
-
-comments:
-  provider: "disqus"
-  disqus:
-    shortname: "your-disqus-shortname"
+google_analytics: G-0MMQG077KJ  # Replace with your real tracking ID"
 
