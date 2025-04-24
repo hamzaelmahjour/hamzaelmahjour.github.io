@@ -24,6 +24,9 @@ github_username: hamzaelmahjour
 minimal_mistakes_skin: "mint"
 search: true
 
+sass:
+  style: compressed
+
 
 head_scripts:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
