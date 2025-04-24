@@ -1,0 +1,13 @@
+---
+---
+
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // Skin
+@import "minimal-mistakes"; // Main partials
+
+.back-button {
+  font-size: 1.5em;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  display: inline-block;
+}
