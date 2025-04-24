@@ -20,7 +20,7 @@ classes: wide
     <ul class="contact-list">
       <li><i class="fas fa-envelope"></i> h.elmahjour@uae.ac.ma</li>
       <li><i class="fas fa-phone"></i>+212 539393743</li>
-      <li><i class="fas fa-map-marker-alt"></i> Tangier, Morocco</li>
+      <li><i class="fas fa-map-marker-alt"></i> Département SIC : B.P 416 Tanger Principale, Tangier, Morocco</li>
     </ul>
   </div>
 </div>
