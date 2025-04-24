@@ -96,9 +96,9 @@ classes: wide
       <h2>Research Affiliations</h2>
       <div class="cv-item">
         <h3>MASI Research Team</h3>
+        <p class="cv-sub">Mathematics & Intelligent Systems</p>
         <p class="cv-desc">Current Permanent Member</p>
         <p class="cv-date">ENSAT - UAE</p>
-        <p class="cv-desc">Current Permanent Member</p>
       </div>
       <div class="cv-item">
         <h3>e-COST WIMANET Project</h3>
@@ -107,12 +107,16 @@ classes: wide
         <p class="cv-desc">Current Member</p>
       </div>
       <div class="cv-item">
-        <h3>Laboratory of Mathematics & Applications</h3>
-        <p class="cv-date">Current Assistant Member</p>
+        <h3>LMA Laboratory</h3>
+        <p class="cv-sub">Mathematics & Applications Laboratory</p>
+        <p class="cv-desc">Current Assistant Member</p>
+        <p class="cv-date">FSTT - UAE</p>
       </div>
       <div class="cv-item">
-        <h3>Laboratory for Simulation and Mathematical Modeling, Data Analysis and Chemistry of Natural Substances</h3>
-        <p class="cv-date">Former Permanent Member</p>
+        <h3> Modélisation et Mathématiques Appliquées Research Team</h3>
+        <p class="cv-sub">Mathematics & Applications for Simulation and Mathematical Modeling, Data Analysis and Chemistry of Natural Substances Laboratory</p>
+        <p class="cv-desc">Former Permanent Member</p>
+        <p class="cv-date">FPL - UAE</p>
       </div>
     </section>
 
