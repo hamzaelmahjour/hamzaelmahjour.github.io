@@ -1,0 +1,141 @@
+<footer>
+  <div class="social-links">
+    <!-- Twitter -->
+    <a href="https://twitter.com/yourusername" class="social-item">
+      <i class="fab fa-twitter"></i>
+      <span class="social-label">Twitter</span>
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/hamzaelmahjour" class="social-item">
+      <i class="fab fa-github"></i>
+      <span class="social-label">GitHub</span>
+    </a>
+
+    <!-- ORCID -->
+    <a href="https://orcid.org/your-id" class="social-item">
+      <i class="fab fa-orcid"></i>
+      <span class="social-label">ORCID</span>
+    </a>
+  </div>
+
+  <div class="footer-text">
+    <p>
+      © 2025 Prof. El Mahjour. 
+      <a href="#" class="terms-trigger">Usage Terms</a> 
+      | Powered by Jekyll & Minimal Mistakes
+    </p>
+  </div>
+
+  <!-- Usage Terms Modal -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Usage Terms</h2>
+      <p>All content (documents, videos, text) is licensed under <strong>CC BY-NC-ND 4.0</strong>:</p>
+      <ul>
+        <li>✅ View and download for personal use</li>
+        <li>✅ Share privately (email/WhatsApp)</li>
+        <li>❌ No republication on other websites</li>
+        <li>❌ No commercial use or sale</li>
+      </ul>
+      <p>Full details: <a href="/license/">License Page</a></p>
+    </div>
+  </div>
+
+  <style>
+  .social-item {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 15px;
+    text-decoration: none !important;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+
+  .social-item:hover {
+    color: #0077b5; /* Hover color */
+  }
+
+  .social-label {
+    margin-left: 8px;
+    font-size: 0.9em;
+    color: #fff; /* Force white text */
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .social-item:hover .social-label {
+    opacity: 1;
+  }
+
+  /* Hide labels on mobile */
+  @media (max-width: 768px) {
+    .social-label {
+      display: none;
+    }
+  }
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: 9999;
+    }
+
+    .modal-content {
+      background: white;
+      color: #000; /* Force black text */
+      padding: 25px;
+      width: 80%;
+      max-width: 600px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+    }
+
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .terms-trigger {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('termsModal');
+      const trigger = document.querySelector('.terms-trigger');
+      const span = document.getElementsByClassName('close')[0];
+
+      // Open modal
+      trigger.onclick = function(e) {
+        e.preventDefault();
+        modal.style.display = 'block';
+      }
+
+      // Close modal
+      span.onclick = function() {
+        modal.style.display = 'none';
+      }
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      }
+    });
+  </script>
+</footer>
