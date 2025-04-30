@@ -46,6 +46,11 @@ Your comments help us improve!
 
 <div style="display: flex; flex-direction: column; gap: 1em; margin-top: 1em;">
 
+
+    <blockquote style="font-style: italic; background: #f9f9f9; padding: 1em; border-left: 4px solid #ccc;">
+    “ I really appreciate your way of teaching. You have a high level of competence, and the way you explain things is very clear. It's easy to follow you lessons, and I always leave the class with a good understanding of the material. Thank you for your efforts.”
+    <footer style="text-align: right; font-size: 0.9em;">— Former Student</footer>
+  </blockquote>
   <blockquote style="font-style: italic; background: #f9f9f9; padding: 1em; border-left: 4px solid #ccc;">
     “ Un professeur à la hauteur, sérieux et sincère.”
     <footer style="text-align: right; font-size: 0.9em;">— Former Student</footer>
