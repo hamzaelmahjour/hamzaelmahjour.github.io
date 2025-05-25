@@ -2,7 +2,7 @@
 title: "Nonlinear SEIS Epidemic Dynamics with Fractional-Order Time: Analytical and Numerical Results (2025)"
 layout: single
 use_math: true
-excerpt: "This study investigates a novel SEIS epidemic model that incorporates fractional-order derivatives to account for the memory effects of the disease spread. The Caputo ..."
+excerpt: "This study investigates a novel SEIS epidemic model that incorporates fractional-order derivatives to account for the memory effects of the disease spread..."
 ---
 
 **Authors**: J El Amrani, H El Mahjour, I Serroukh and A Lahrouz <a href="{{ '/research/' | relative_url }}">↩</a>
