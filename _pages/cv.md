@@ -13,7 +13,7 @@ classes: wide
 {% include cv-style.html %}
 
 <div class="cv-sidebar">
-  <img src="../assets/images/bio-photo3.jpg" alt="Hamza El Mahjour" class="cv-photo">
+  <img src="../assets/images/hamza_explain.png" alt="Hamza El Mahjour" class="cv-photo">
   <div class="personal-info">
     <h3>Hamza EL Mahjour</h3>
     <p>Professor-Researcher</p>
