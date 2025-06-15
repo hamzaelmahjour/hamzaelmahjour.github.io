@@ -5,7 +5,7 @@ permalink: /videos/
 author_profile: false
 classes: wide
 header:
-  overlay_image: ../assets/header/videos_banner.gif
+  overlay_image: ../assets/header/videos_banner_1.gif
   overlay_filter: 0.3
   overlay_full: true
 ---

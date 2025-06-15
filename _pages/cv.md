@@ -5,7 +5,7 @@ layout: single
 author_profile: false
 header:
   overlay_color: "#5e616c"
-  overlay_image: ../assets/images/abstract_unsplash_cv.jpg
+  overlay_image: ../assets/images/abstract_unsplash_cv_1.jpg
   overlay_filter: 0.5
 classes: wide
 ---
