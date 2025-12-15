@@ -1,6 +1,6 @@
 ---
 title: "News"
-layout: collection
+layout: single
 permalink: /news/
 collection: news
 header:
@@ -8,41 +8,36 @@ header:
   overlay_filter: 0.3
   overlay_full: true
 ---
-layout: post
-title: **Introduction to Neural Networks with PyTorch**
-date: From 2025-12-09 to 2025-12-11
-categories: workshop
-location: Room 2.23 - Building IX - FCT - University NOVA LISBOA
-tags: [AI, machine-learning, workshop, PyTorch]
----
 
-I was really happy to introduce neural networks for Masters students, PhD. students from the FCT of NOVA LISBOA. 
+## Introduction to Neural Networks with PyTorch – Workshop  
+**2025-12-09 to 2025-12-11**  
+Room 2.23 – Building IX – FCT, University NOVA de Lisboa
 
-Key highlights:
-- How to apply Linear/Logistic Regression using `scikit.learn`
-- Use PyTorch to create manually neural networks
-- Examples of Physics Informed Neural Networks (Burger's equation etc.)
+I was really happy to introduce neural networks to Master’s and PhD students from FCT NOVA.
+
+Key highlights  
+- Linear and logistic regression with `scikit-learn`  
+- Building neural networks from scratch in PyTorch  
+- Physics-Informed Neural Networks (Burgers’ equation, etc.)
 
 More details: [Workshop website](https://novamath.fct.unl.pt/thematic-line-mathbios-workshop/)
 
----
-layout: post
-title: **Fractional Calculus : Theory and Applications**
-date: 2025-12-10
-categories: seminar
-location: Room 2.23 - Building IX - FCT - University NOVA LISBOA
-tags: [Fractional Calculus, FDEs, proofs gaps]
----
+<br>
 
-I was really happy to be part of the seminar presented by my dear colleague Aadil Lahrouz who presented his important work on fractional differential equations and some gaps that he detected on some papers
+## Fractional Calculus: Theory and Applications – Seminar  
+**2025-12-10**  
+Room 2.23 – Building IX – FCT, University NOVA de Lisboa
 
-The seminar was given thanks to the following members:
-- organizer: Pr. Paula Patricio
-- chairman: Pr. Hamza El Mahjour
-- speaker: Pr. Aadil Lahrouz
-Slides available upon request.
-More details: [Workshop website](https://novamath.fct.unl.pt/thematic-line-mathbios-seminar/)
+Being part of the seminar presented online by my colleague Prof. Aadil Lahrouz was outstanding. He discussed his recent work on fractional differential equations and pointed out gaps in several published papers.
 
-P.S: The second talk was about **Fractional Derivatives : Applications in data fitting and Artifcial Neural Networks**. It was cancelled due to a very tight schedule where I had to give another session of the workshop because of thursday's general strike in Lisbon the day after
----
-{% include head/custom.html %}
+Thanks to  
+- **Organizer**: Prof. Paula Patrício  
+- **Chair**: Prof. Hamza El Mahjour  
+- **Speaker**: Prof. Aadil Lahrouz  
+
+Slides are available upon request (just contact me!).
+
+More details: [Seminar website](https://novamath.fct.unl.pt/thematic-line-mathbios-seminar/)  
+Check also: [Seminar abstract](../assets/resources/MathBios_Seminar.pdf)
+
+**P.S.** The second talk (“Fractional Derivatives: Applications in data fitting and Artificial Neural Networks”) was unfortunately cancelled due to the general strike in Lisbon and the resulting tight schedule.
