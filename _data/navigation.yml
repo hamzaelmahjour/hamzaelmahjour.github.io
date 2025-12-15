@@ -9,5 +9,5 @@ main:
     url: /videos/
   - title: "CV"
     url: /cv/
-  - title: "Feedback"
-    url: /feedback/
+  - title: "News"
+    url: /news/
