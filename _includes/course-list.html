@@ -1,0 +1,21 @@
+{%- comment -%} Bookshelf of courses (home + teaching page) {%- endcomment -%}
+{%- assign courses = site.teaching | sort: 'order' -%}
+<ul class="shelf">
+{%- for c in courses -%}
+  {%- assign nseq = c.sequences.size | default: 0 -%}
+  {%- for m in c.modules -%}{%- assign nseq = nseq | plus: m.sequences.size -%}{%- endfor -%}
+  {%- assign nquiz = site.quizzes | where: 'course', c.code | size -%}
+  <li class="book">
+    <a href="{{ c.url | relative_url }}" class="book-link">
+      {%- if c.notes.cover -%}
+        <img class="book-cover" src="{{ c.folder | append: c.notes.cover | relative_url }}" alt="" loading="lazy" width="360" height="470">
+      {%- else -%}
+        <span class="book-cover book-cover-plain" aria-hidden="true"><span>{{ c.title }}</span></span>
+      {%- endif -%}
+      <span class="book-title">{{ c.title }}</span>
+    </a>
+    {%- if c.level %}<span class="book-level">{{ c.level }}</span>{% endif -%}
+    <span class="book-meta">{{ nseq }} séquences{% if nquiz > 0 %}, {{ nquiz }} quiz{% endif %}{% if c.archives %}, annales{% endif %}</span>
+  </li>
+{%- endfor -%}
+</ul>

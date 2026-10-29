@@ -1,0 +1,22 @@
+{%- comment -%} Ordered list of course sequences. Params: list, folder, prefix {%- endcomment -%}
+<ol class="seq-list">
+{%- for s in include.list -%}
+  <li class="seq" id="{{ include.prefix }}{{ forloop.index }}">
+    <span class="seq-num" aria-hidden="true">{{ forloop.index }}</span>
+    <div class="seq-body">
+      <h3 class="seq-title">{{ s.title }}</h3>
+      {%- if s.note %}<p class="seq-note">{{ s.note }}</p>{% endif -%}
+      <div class="res-row">
+        {%- if s.slides %}{% include res-link.html path=s.slides folder=include.folder label="Cours" kind="slides" %}{% endif -%}
+        {%- if s.td %}{% include res-link.html path=s.td folder=include.folder label="TD" kind="td" %}{% endif -%}
+        {%- if s.correction %}{% include res-link.html path=s.correction folder=include.folder label="Corrigé" kind="correction" %}{% endif -%}
+        {%- for x in s.extra %}{% include res-link.html path=x.file folder=include.folder label=x.label kind=x.kind %}{% endfor -%}
+        {%- if s.quiz -%}
+          {%- assign sq_url = '/quiz/' | append: s.quiz | append: '/' -%}
+          {% include res-link.html path=sq_url label="Quiz" kind="quiz" %}
+        {%- endif -%}
+      </div>
+    </div>
+  </li>
+{%- endfor -%}
+</ol>

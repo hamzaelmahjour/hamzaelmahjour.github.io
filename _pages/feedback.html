@@ -1,0 +1,33 @@
+---
+title: "Feedback"
+permalink: /feedback/
+lede: "Tell me what works and what doesn't, about my teaching, this website or anything else. Your message is anonymous unless you leave an email."
+---
+<form class="feedback-form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
+  <fieldset>
+    <legend>I am a…</legend>
+    <label><input type="radio" name="role" value="Student" required> Student</label>
+    <label><input type="radio" name="role" value="Former student"> Former student</label>
+    <label><input type="radio" name="role" value="Colleague"> Colleague</label>
+    <label><input type="radio" name="role" value="Visitor"> Visitor</label>
+  </fieldset>
+  <label class="field">
+    <span>Your message</span>
+    <textarea name="message" rows="6" required></textarea>
+  </label>
+  <label class="field">
+    <span>Your email (optional, only if you want an answer)</span>
+    <input type="email" name="_replyto" autocomplete="email">
+  </label>
+  <button class="btn btn-primary" type="submit">Send feedback</button>
+</form>
+
+<h2>What others have said</h2>
+<div class="quotes quotes-all">
+  {%- for t in site.data.testimonials %}
+  <figure class="quote">
+    <blockquote><p>{{ t.quote }}</p></blockquote>
+    <figcaption>{{ t.from }}</figcaption>
+  </figure>
+  {%- endfor %}
+</div>

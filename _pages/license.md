@@ -1,22 +1,19 @@
 ---
-title: "License & Usage Terms"
-permalink: /license/  # Makes the page accessible at `your-site.com/license/`
-layout: splash
+title: "License and usage terms"
+permalink: /license/
 ---
 
-## 📜 Content License  
-All content (posts, documents, videos) on this site is licensed under:  
+All content on this site (documents, slides, exercise sheets, videos and text) is licensed under [Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
-### **Creative Commons BY-NC-ND 4.0**  
-[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)  
+## You may
 
-✅ **Allowed:**  
-- Private viewing/downloading.  
-- Sharing via **private channels** (email, WhatsApp, etc.).  
+- View and download any document for your own study.
+- Share links or files privately, for example by email or WhatsApp.
 
-❌ **Prohibited:**  
-- Selling or monetizing content.  
-- Republishing on other websites (even with credit).  
-- Re-uploading Vimeo videos elsewhere.  
+## You may not
 
-📝 **Exceptions?** Contact: [h.elmahjour@uae.ac.ma] 
+- Sell the content or use it commercially.
+- Republish it on another website, even with credit.
+- Re-upload the videos to another platform.
+
+For any other use, write to [h.elmahjour@uae.ac.ma](mailto:h.elmahjour@uae.ac.ma).

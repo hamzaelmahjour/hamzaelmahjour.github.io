@@ -1,0 +1,32 @@
+---
+title: "Videos"
+permalink: /videos/
+lede: "Animated explanations of mathematical ideas, most of them made with Manim. Click a video to play it here."
+wide: true
+---
+{%- for group in site.data.videos %}
+<section class="video-group">
+  <h2>{{ group.category }}</h2>
+  <ul class="video-grid">
+    {%- for v in group.videos %}
+    <li>
+      <button class="video-card" type="button" data-vimeo="{{ v.id }}" data-title="{{ v.title | escape }}">
+        <span class="video-thumb">
+          <img src="{{ v.thumbnail }}" alt="" loading="lazy" width="480" height="320">
+          <span class="video-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+        </span>
+        <span class="video-title">{{ v.title }}</span>
+        <span class="video-desc">{{ v.description }}</span>
+      </button>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endfor %}
+
+<dialog class="video-dialog" id="video-dialog">
+  <div class="video-frame">
+    <iframe id="video-iframe" title="Video player" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <form method="dialog"><button class="btn btn-small" type="submit">Close</button></form>
+</dialog>

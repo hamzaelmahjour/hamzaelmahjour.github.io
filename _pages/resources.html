@@ -1,0 +1,68 @@
+---
+title: "Ressources"
+permalink: /resources/
+lang: fr
+lede: "Tous les documents des cours au même endroit. Cherchez un titre, filtrez par type, puis partagez le lien directement (WhatsApp, e-mail…)."
+wide: true
+scripts: [/assets/js/library.js]
+---
+<div class="lib-tools" id="lib-tools" hidden>
+  <label class="lib-search">
+    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+    <span class="sr-only">Rechercher</span>
+    <input type="search" id="lib-q" placeholder="Rechercher : examen 2024, intégrales, martingales…" autocomplete="off">
+  </label>
+  <div class="lib-filters" role="group" aria-label="Filtrer par type">
+    <button type="button" data-filter="all" aria-pressed="true">Tout</button>
+    <button type="button" data-filter="notes" aria-pressed="false">Notes de cours</button>
+    <button type="button" data-filter="slides" aria-pressed="false">Cours</button>
+    <button type="button" data-filter="td" aria-pressed="false">TD</button>
+    <button type="button" data-filter="correction" aria-pressed="false">Corrigés</button>
+    <button type="button" data-filter="exam" aria-pressed="false">Examens</button>
+    <button type="button" data-filter="quiz" aria-pressed="false">Quiz</button>
+    <button type="button" data-filter="other" aria-pressed="false">Livres et liens</button>
+  </div>
+  <p class="lib-count" id="lib-count" aria-live="polite"></p>
+</div>
+
+{%- assign courses = site.teaching | sort: 'order' -%}
+{%- for c in courses %}
+<section class="lib-group" id="{{ c.code }}">
+  <h2><a href="{{ c.url | relative_url }}">{{ c.title }}</a></h2>
+  <ul class="lib-list">
+    {%- if c.notes -%}{% include lib-row.html title="Notes de cours complètes" path=c.notes.file folder=c.folder type="notes" coursename=c.title %}{%- endif -%}
+    {%- for s in c.sequences -%}
+      {%- if s.slides %}{% include lib-row.html title=s.title path=s.slides folder=c.folder type="slides" coursename=c.title %}{% endif -%}
+      {%- if s.td %}{% capture t %}TD : {{ s.title }}{% endcapture %}{% include lib-row.html title=t path=s.td folder=c.folder type="td" coursename=c.title %}{% endif -%}
+      {%- if s.correction %}{% capture t %}Corrigé : {{ s.title }}{% endcapture %}{% include lib-row.html title=t path=s.correction folder=c.folder type="correction" coursename=c.title %}{% endif -%}
+    {%- endfor -%}
+    {%- for m in c.modules -%}{%- for s in m.sequences -%}
+      {%- if s.slides %}{% include lib-row.html title=s.title path=s.slides folder=c.folder type="slides" coursename=c.title %}{% endif -%}
+      {%- if s.td %}{% capture t %}TD : {{ s.title }}{% endcapture %}{% include lib-row.html title=t path=s.td folder=c.folder type="td" coursename=c.title %}{% endif -%}
+      {%- if s.correction %}{% capture t %}Corrigé : {{ s.title }}{% endcapture %}{% include lib-row.html title=t path=s.correction folder=c.folder type="correction" coursename=c.title %}{% endif -%}
+    {%- endfor -%}{%- endfor -%}
+    {%- assign qs = site.quizzes | where: 'course', c.code -%}
+    {%- for q in qs %}{% include lib-row.html title=q.title path=q.url type="quiz" coursename=c.title %}{% endfor -%}
+    {%- for a in c.archives -%}{%- for f in a.files -%}
+      {%- assign al = f.label | downcase -%}
+      {%- if al contains 'exam' or al contains 'ratt' -%}{%- assign ak = 'exam' -%}{%- elsif al contains 'corrig' -%}{%- assign ak = 'correction' -%}{%- else -%}{%- assign ak = 'td' -%}{%- endif -%}
+      {%- capture t %}{{ f.label }} {{ a.year }}{% endcapture -%}
+      {% include lib-row.html title=t path=f.file folder=c.folder type=ak coursename=c.title %}
+    {%- endfor -%}{%- endfor -%}
+    {%- assign extras = site.data.library | where: 'course', c.code -%}
+    {%- for x in extras %}{% include lib-row.html title=x.title path=x.file type=x.type coursename=c.title note=x.note %}{% endfor -%}
+  </ul>
+</section>
+{%- endfor %}
+
+{%- assign general = site.data.library | where_exp: "x", "x.course == nil" -%}
+{%- if general.size > 0 %}
+<section class="lib-group" id="autres">
+  <h2>Autres ressources</h2>
+  <ul class="lib-list">
+    {%- for x in general %}{% include lib-row.html title=x.title path=x.file type=x.type coursename="" note=x.note %}{% endfor -%}
+  </ul>
+</section>
+{%- endif %}
+
+<p class="lib-empty" id="lib-empty" hidden>Aucun document ne correspond. Essayez un autre mot, ou choisissez « Tout ».</p>

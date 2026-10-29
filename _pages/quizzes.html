@@ -1,0 +1,31 @@
+---
+title: "Quiz"
+permalink: /quiz/
+lang: fr
+lede: "Des exercices courts, corrigés automatiquement. Chaque réponse est vérifiée tout de suite, avec une explication. Votre meilleure note reste enregistrée sur cet appareil."
+wide: true
+---
+{%- assign courses = site.teaching | sort: 'order' -%}
+{%- for c in courses -%}
+  {%- assign qs = site.quizzes | where: 'course', c.code -%}
+  {%- if qs.size > 0 or c.legacy_quizzes %}
+<section class="quiz-group">
+  <h2><a href="{{ c.url | relative_url }}">{{ c.title }}</a></h2>
+  <ul class="quiz-list">
+    {%- for q in qs -%}
+    <li class="quiz-row" data-quiz-key="{{ q.url | relative_url }}">
+      <a href="{{ q.url | relative_url }}">{{ q.title }}</a>
+      {%- if q.description %}<span class="quiz-desc">{{ q.description }}</span>{% endif -%}
+      <span class="quiz-best" hidden></span>
+    </li>
+    {%- endfor -%}
+    {%- for l in c.legacy_quizzes -%}
+    <li class="quiz-row quiz-legacy">
+      <a href="{{ c.folder | append: l.file | relative_url }}">{{ l.label }}</a>
+      <span class="quiz-desc">Ancien format (H5P)</span>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+  {%- endif -%}
+{%- endfor -%}

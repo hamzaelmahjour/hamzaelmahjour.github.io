@@ -1,0 +1,14 @@
+{%- comment -%} Publications list. Param: limit {%- endcomment -%}
+{%- assign papers = site.research | sort: 'year' | reverse -%}
+<ol class="papers" reversed>
+{%- for p in papers limit: include.limit -%}
+  <li class="paper-item">
+    <span class="paper-year">{{ p.year }}</span>
+    <div>
+      <a class="paper-title" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+      <p class="paper-authors">{{ p.authors | replace: 'H El Mahjour', '<strong>H El Mahjour</strong>' }}</p>
+      <p class="paper-venue"><em>{{ p.journal }}</em>{% if p.details %}, {{ p.details }}{% endif %}</p>
+    </div>
+  </li>
+{%- endfor -%}
+</ol>

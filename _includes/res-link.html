@@ -1,0 +1,25 @@
+{%- comment -%}
+  Prints one resource link.
+  Params: path (relative to folder, or /absolute, or https://…), folder, label, kind
+{%- endcomment -%}
+{%- assign rl_path = include.path | strip -%}
+{%- if rl_path contains '://' -%}
+  {%- assign rl_url = rl_path -%}{%- assign rl_ext = 'lien' -%}
+{%- else -%}
+  {%- assign rl_first = rl_path | slice: 0 -%}
+  {%- if rl_first == '/' -%}{%- assign rl_url = rl_path | relative_url -%}
+  {%- else -%}{%- assign rl_url = include.folder | append: rl_path | relative_url -%}{%- endif -%}
+  {%- assign rl_last = rl_path | split: '/' | last -%}
+  {%- if rl_last contains '.' -%}{%- assign rl_ext = rl_last | split: '.' | last | downcase -%}{%- else -%}{%- assign rl_ext = 'page' -%}{%- endif -%}
+{%- endif -%}
+{%- case include.kind -%}
+  {%- when 'slides' -%}{%- assign rl_icon = 'fa-solid fa-person-chalkboard' -%}
+  {%- when 'td' -%}{%- assign rl_icon = 'fa-solid fa-pencil' -%}
+  {%- when 'correction' -%}{%- assign rl_icon = 'fa-solid fa-check-double' -%}
+  {%- when 'quiz' -%}{%- assign rl_icon = 'fa-solid fa-list-check' -%}
+  {%- when 'video' -%}{%- assign rl_icon = 'fa-solid fa-play' -%}
+  {%- else -%}{%- assign rl_icon = 'fa-regular fa-file-lines' -%}
+{%- endcase -%}
+<a class="res res-{{ include.kind | default: 'other' }}" href="{{ rl_url }}"{% if rl_ext != 'html' and rl_ext != 'page' or rl_path contains '://' %} target="_blank" rel="noopener"{% endif %}>
+  <i class="{{ rl_icon }}" aria-hidden="true"></i><span class="res-label">{{ include.label }}</span>{% if rl_ext != 'lien' and rl_ext != 'html' and rl_ext != 'page' %}<span class="res-ext">{{ rl_ext | upcase }}</span>{% endif %}
+</a>

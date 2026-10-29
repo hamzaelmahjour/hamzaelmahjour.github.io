@@ -1,0 +1,96 @@
+---
+layout: default
+---
+{%- assign quizzes = site.quizzes | where: 'course', page.code -%}
+<article class="wrap course">
+  <p class="crumbs"><a href="{{ '/teaching/' | relative_url }}">Teaching</a></p>
+  <header class="page-head course-head">
+    <h1>{{ page.title }}</h1>
+    {%- if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif -%}
+    <p class="course-actions">
+      {%- if page.level %}<span class="course-level">{{ page.level }}</span>{% endif -%}
+      <button class="btn btn-small share-btn share-page" type="button" data-share-url="{{ page.url | absolute_url }}" data-share-title="{{ page.title | escape }}">
+        <i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Partager le cours
+      </button>
+    </p>
+  </header>
+
+  <div class="course-grid">
+    <div class="course-main">
+      <section class="course-section" aria-labelledby="h-seq">
+        <h2 id="h-seq">Séquences</h2>
+        {%- if page.sequences -%}
+          {% include sequences.html list=page.sequences folder=page.folder prefix="s" %}
+        {%- endif -%}
+        {%- for m in page.modules -%}
+          <h3 class="module-title">{{ m.title }}</h3>
+          {%- if m.description %}<p class="module-desc">{{ m.description }}</p>{% endif -%}
+          {%- capture mp %}m{{ forloop.index }}-{% endcapture -%}
+          {% include sequences.html list=m.sequences folder=page.folder prefix=mp %}
+        {%- endfor -%}
+      </section>
+
+      {%- if quizzes.size > 0 or page.legacy_quizzes -%}
+      <section class="course-section" aria-labelledby="h-quiz">
+        <h2 id="h-quiz">S'entraîner</h2>
+        <ul class="quiz-list">
+          {%- for q in quizzes -%}
+          <li class="quiz-row" data-quiz-key="{{ q.url | relative_url }}">
+            <a href="{{ q.url | relative_url }}">{{ q.title }}</a>
+            {%- if q.description %}<span class="quiz-desc">{{ q.description }}</span>{% endif -%}
+            <span class="quiz-best" hidden></span>
+          </li>
+          {%- endfor -%}
+          {%- for l in page.legacy_quizzes -%}
+          <li class="quiz-row quiz-legacy">
+            <a href="{{ page.folder | append: l.file | relative_url }}">{{ l.label }}</a>
+            <span class="quiz-desc">Ancien format (H5P)</span>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </section>
+      {%- endif -%}
+
+      {%- if page.archives -%}
+      <section class="course-section" aria-labelledby="h-arch">
+        <h2 id="h-arch">Annales : examens et TD des années précédentes</h2>
+        <dl class="archives">
+          {%- for a in page.archives -%}
+          <div class="archive-year">
+            <dt>{{ a.year }}</dt>
+            <dd class="res-row">
+              {%- for f in a.files -%}
+                {%- assign al = f.label | downcase -%}
+                {%- if al contains 'exam' or al contains 'ratt' -%}{%- assign ak = 'exam' -%}
+                {%- elsif al contains 'corrig' -%}{%- assign ak = 'correction' -%}
+                {%- else -%}{%- assign ak = 'td' -%}{%- endif -%}
+                {% include res-link.html path=f.file folder=page.folder label=f.label kind=ak %}
+              {%- endfor -%}
+            </dd>
+          </div>
+          {%- endfor -%}
+        </dl>
+      </section>
+      {%- endif -%}
+
+      {%- assign body = content | strip -%}
+      {%- if body != '' -%}
+      <section class="course-section prose">
+        {{ content }}
+      </section>
+      {%- endif -%}
+    </div>
+
+    {%- if page.notes -%}
+    <aside class="course-aside" aria-label="Notes de cours">
+      <a class="notes-card" href="{{ page.folder | append: page.notes.file | relative_url }}" target="_blank" rel="noopener">
+        {%- if page.notes.cover -%}
+        <img src="{{ page.folder | append: page.notes.cover | relative_url }}" alt="Couverture des notes de cours : {{ page.title }}" width="360" height="470">
+        {%- endif -%}
+        <span class="notes-title">Notes de cours complètes</span>
+        <span class="notes-cta"><i class="fa-solid fa-download" aria-hidden="true"></i> Télécharger le PDF</span>
+      </a>
+    </aside>
+    {%- endif -%}
+  </div>
+</article>

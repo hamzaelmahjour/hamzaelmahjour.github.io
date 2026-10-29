@@ -1,0 +1,13 @@
+---
+title: "News"
+permalink: /news/
+lede: "Workshops, seminars and conferences."
+---
+{%- for p in site.posts %}
+<article class="news-item">
+  <h2><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h2>
+  <p class="news-when">{% if p.dates %}{{ p.dates }}{% else %}{{ p.date | date: '%-d %B %Y' }}{% endif %}{% if p.location %}<br>{{ p.location }}{% endif %}</p>
+  {{ p.content }}
+  {%- if p.link %}<p><a href="{{ p.link }}" target="_blank" rel="noopener">{{ p.link_label | default: 'More details' }}</a></p>{% endif -%}
+</article>
+{%- endfor %}

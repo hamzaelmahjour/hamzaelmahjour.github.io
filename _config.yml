@@ -1,143 +1,97 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Prof. El Mahjour
-url: "https://hamzaelmahjour.github.io"  # ← ADD THIS
-baseurl: ""                   # ← ADD THIS
+# ─────────────────────────────────────────────────────────────
+#  Site settings — edit freely. Restart `jekyll serve` after changes.
+# ─────────────────────────────────────────────────────────────
+title: "Hamza El Mahjour"
+url: "https://hamzaelmahjour.github.io"
+baseurl: ""
+lang: en
+timezone: Africa/Casablanca
 email: h.elmahjour@uae.ac.ma
-description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my personal website. I am a Mathematics Professor and researcher passionate about both advancing mathematical knowledge and making it accessible to others. This space is dedicated to sharing my academic journey, ongoing research projects, and published work, as well as offering a wide range of carefully curated resources for students. Whether you're looking for lecture notes, video tutorials, or insights into current mathematical topics, my goal is to support your learning, spark curiosity, and contribute to a deeper understanding of mathematics at all levels.
-twitter_username: PrHamzaElMahjour
-github_username: hamzaelmahjour
-minimal_mistakes_skin: "mint"
-search: true
+description: >-
+  Hamza El Mahjour, lecturer-researcher in applied mathematics at ENSA Tangier
+  (Abdelmalek Essaâdi University). Course materials, interactive quizzes and
+  research on mathematical epidemiology.
 
-sass:
-  style: compressed
+author:
+  name: "Hamza El Mahjour"
+  role: "Lecturer-researcher in applied mathematics at ENSA Tangier, Abdelmalek Essaâdi University"
+  bio: >-
+    I teach probability, algebra, mathematics for economics and stochastic
+    calculus. My research applies mathematics to epidemics: stochastic and
+    fractional-order models, bifurcations and optimal control.
+  photo: /assets/images/profile.jpg
+  links:
+    - label: "ENSAT"
+      icon: "fa-solid fa-building-columns"
+      url: "https://ensat.ac.ma/Portail/liste-des-enseignant-du-departement-sic/"
+    - label: "ORCID"
+      icon: "fa-brands fa-orcid"
+      url: "https://orcid.org/0000-0002-7081-2114"
+    - label: "Scopus"
+      icon: "fa-solid fa-database"
+      url: "https://www.scopus.com/authid/detail.uri?authorId=6504193814"
+    - label: "GitHub"
+      icon: "fa-brands fa-github"
+      url: "https://github.com/hamzaelmahjour"
+    - label: "X"
+      icon: "fa-brands fa-x-twitter"
+      url: "https://x.com/PrElMahjour"
 
+twitter:
+  username: PrElMahjour
+social:
+  name: Hamza El Mahjour
+  links:
+    - https://x.com/PrElMahjour
+    - https://github.com/hamzaelmahjour
+    - https://orcid.org/0000-0002-7081-2114
 
-head_scripts:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
+google_analytics: G-0MMQG077KJ
+formspree_id: mzzrpoor
 
-masthead_title: false  # Disables text title in header
-# Build settings
+# ─── Build ───────────────────────────────────────────────────
 markdown: kramdown
-
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
-remote_theme: mmistakes/minimal-mistakes
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: Africa/Casablanca
-# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+sass:
+  style: compressed
 
-favicon: assets/images/favicon.ico
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 include:
   - _pages
-  - _teaching
-  - _research
-font_awesome: true
+exclude:
+  - GUIDE.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+permalink: /news/:year/:title/
 
-# Plugins (previously gems:)
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
-
-author:
-  name   : "Hamza El Mahjour"
-  avatar : "assets/images/bio-photo4.jpg"
-  bio    : "I am a professor and I love teaching mathematics. I also do some research by applying math on epidemic models."
-  links:
-    - label: "ENSAT"
-      icon: "fas fa-university"
-      url: "https://ensat.ac.ma/Portail/liste-des-enseignant-du-departement-sic/"
-    - label: "X Twitter"
-      icon: "fab fa-x-twitter"
-      url: "https://x.com/PrElMahjour"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/hamzaelmahjour"
-    - label: "ORCID"
-      icon: "fab fa-fw fa-orcid"
-      url: "https://orcid.org/0000-0002-7081-2114"
-    - label: "Scopus"
-      icon: "fas fa-fw fa-database"
-      url: "https://www.scopus.com/authid/detail.uri?authorId=6504193814"
-
-footer:
-  links:
-    - label: "Twitter"
-      icon: "bi bi-twitter-x"
-      #icon: "fab fa-fw fa-x-twitter"
-      url: "https://x.com/PrElMahjour"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/hamzaelmahjour"
-
-defaults:
-  # _research
-    #enable math for _research .md files
-  - scope:
-      path: "_research"
-      type : research
-    values:
-      layout: single
-      math: true
-      hide_title: true 
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-  
 collections:
+  teaching:
+    output: true
   research:
     output: true
     permalink: /research/:title/
-  teaching:
+  quizzes:
     output: true
-    permalink: /teaching/:title/
+    permalink: /quiz/:name/
 
-
-google_analytics: G-0MMQG077KJ  # Replace with your real tracking ID"
-
+defaults:
+  - scope: { path: "" }
+    values: { layout: page }
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "", type: teaching }
+    values: { layout: course, math: true }
+  - scope: { path: "", type: research }
+    values: { layout: paper, math: true }
+  - scope: { path: "", type: quizzes }
+    values: { layout: quiz, math: true, lang: fr }

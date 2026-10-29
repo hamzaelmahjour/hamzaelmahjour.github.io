@@ -1,0 +1,25 @@
+# Extra resources shown on the Resources page, on top of everything
+# listed in your course pages (which appears there automatically).
+#
+#   title:   what students see
+#   type:    livre | article | lien | slides | video | autre
+#   file:    a path in the repo (/assets/...) OR a full https:// link
+#            (Google Drive, a publisher page, a GitHub Release…)
+#   course:  optional, the `code` of a course (proba, algebre1, matheco, stochastique)
+#   note:    optional, one short line
+#
+# Example of a book:
+# - title: "Introduction to Probability (Grinstead & Snell)"
+#   type: livre
+#   file: https://…
+#   course: proba
+#   note: "Free textbook, chapters 1–4 match the course."
+
+- title: "Calcul intégral : présentation interactive (2022–2023)"
+  type: slides
+  file: /assets/resources/math_eco/presentation_calcul_integral_22_23.html
+  course: matheco
+
+- title: "MathBioS seminar on fractional calculus (abstract)"
+  type: article
+  file: /assets/resources/MatHBioS_Seminar.pdf

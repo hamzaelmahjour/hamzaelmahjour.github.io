@@ -1,22 +1,16 @@
 ---
-title: "This is my Curriculum Vitae"
+title: "Curriculum vitae"
 permalink: /cv/
-layout: single
-author_profile: false
-header:
-  overlay_color: "#5e616c"
-  overlay_image: ../assets/images/abstract_unsplash_cv_1.jpg
-  overlay_filter: 0.5
-classes: wide
+wide: true
 ---
 
 {% include cv-style.html %}
 
 <div class="cv-sidebar">
-  <img src="../assets/images/hamza_explain.png" alt="Hamza El Mahjour" class="cv-photo">
+  <img src="{{ '/assets/images/hamza_explain.png' | relative_url }}" alt="Hamza El Mahjour" class="cv-photo">
   <div class="personal-info">
     <h3>Hamza EL Mahjour</h3>
-    <p>Professor-Researcher</p>
+    <p>Lecturer-researcher in applied mathematics</p>
     <ul class="contact-list">
       <li><i class="fas fa-envelope"></i> h.elmahjour@uae.ac.ma</li>
       <li><i class="fas fa-phone"></i>+212 539393743</li>

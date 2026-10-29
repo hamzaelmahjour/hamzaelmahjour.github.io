@@ -1,0 +1,29 @@
+---
+layout: default
+---
+{%- assign course = site.teaching | where: 'code', page.course | first -%}
+<article class="wrap quiz-page" lang="fr">
+  <p class="crumbs">
+    <a href="{{ '/quiz/' | relative_url }}">Quiz</a>
+    {%- if course %} <span aria-hidden="true">/</span> <a href="{{ course.url | relative_url }}">{{ course.title }}</a>{% endif -%}
+  </p>
+  <header class="page-head">
+    <h1>{{ page.title }}</h1>
+    {%- if page.description %}<p class="lede">{{ page.description }}</p>{% endif -%}
+  </header>
+
+  <div class="sheet" id="quiz" data-shuffle-questions="{{ page.shuffle_questions | default: false }}" data-shuffle-choices="{{ page.shuffle_choices | default: false }}">
+    <noscript><p class="sheet-msg">Ce quiz a besoin de JavaScript pour fonctionner.</p></noscript>
+  </div>
+
+  <div class="quiz-bar" id="quiz-bar" hidden>
+    <div class="quiz-progress"><span id="quiz-count"></span><span class="bar"><span id="quiz-fill"></span></span></div>
+    <button class="btn btn-small share-btn" type="button" data-share-url="{{ page.url | absolute_url }}" data-share-title="{{ page.title | escape }}">
+      <i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Partager
+    </button>
+  </div>
+</article>
+<script type="text/plain" id="quiz-source">
+{{ content }}
+</script>
+<script src="{{ '/assets/js/quiz.js' | relative_url }}" defer></script>

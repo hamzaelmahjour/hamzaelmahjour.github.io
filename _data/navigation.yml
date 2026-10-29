@@ -1,13 +1,16 @@
+# Top menu. Order here = order on the site.
 main:
-  - title: "Home"
-    url: /
-  - title: "Research"
-    url: /research/
   - title: "Teaching"
     url: /teaching/
+  - title: "Quizzes"
+    url: /quiz/
+  - title: "Resources"
+    url: /resources/
+  - title: "Research"
+    url: /research/
   - title: "Videos"
     url: /videos/
-  - title: "CV"
-    url: /cv/
   - title: "News"
     url: /news/
+  - title: "CV"
+    url: /cv/

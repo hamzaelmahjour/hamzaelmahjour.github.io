@@ -1,0 +1,89 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1>{{ site.author.name }}</h1>
+      <p class="hero-role">{{ site.author.role }}</p>
+      <p class="hero-bio">{{ site.author.bio }}</p>
+      <p class="actions">
+        <a class="btn btn-primary" href="{{ '/teaching/' | relative_url }}">Course materials</a>
+        <a class="btn" href="{{ '/research/' | relative_url }}">Publications</a>
+      </p>
+    </div>
+    <figure class="hero-photo">
+      <img src="{{ site.author.photo | relative_url }}" alt="Portrait of {{ site.author.name }}" width="720" height="900">
+    </figure>
+  </div>
+</section>
+
+<section class="wrap home-block">
+  <div class="block-head">
+    <h2>Courses</h2>
+    <p>Slides, exercise sheets with solutions, past exams and full lecture notes, in French.</p>
+  </div>
+  {% include course-list.html %}
+</section>
+
+<section class="wrap home-block home-split">
+  <div>
+    <div class="block-head">
+      <h2>Practice online</h2>
+      <p>Short quizzes that correct themselves as you go. Math answers are typed like on a calculator.</p>
+    </div>
+    <ul class="quiz-list">
+      {%- assign qs = site.quizzes | sort: 'title' -%}
+      {%- for q in qs limit: 4 -%}
+      {%- assign qc = site.teaching | where: 'code', q.course | first -%}
+      <li class="quiz-row" data-quiz-key="{{ q.url | relative_url }}">
+        <a href="{{ q.url | relative_url }}">{{ q.title }}</a>
+        <span class="quiz-desc">{{ qc.title }}</span>
+        <span class="quiz-best" hidden></span>
+      </li>
+      {%- endfor -%}
+    </ul>
+    <p><a class="more" href="{{ '/quiz/' | relative_url }}">All quizzes</a></p>
+  </div>
+  <div>
+    <div class="block-head">
+      <h2>Latest news</h2>
+    </div>
+    <ul class="news-mini">
+      {%- for p in site.posts limit: 3 -%}
+      <li>
+        <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+        <span>{{ p.date | date: '%B %Y' }}</span>
+      </li>
+      {%- endfor -%}
+    </ul>
+    <p><a class="more" href="{{ '/news/' | relative_url }}">All news</a></p>
+  </div>
+</section>
+
+<section class="wrap home-block">
+  <div class="block-head">
+    <h2>Recent publications</h2>
+    <p>Mathematical epidemiology: stochastic and fractional models, networks, control.</p>
+  </div>
+  {% include paper-list.html limit=4 %}
+  <p><a class="more" href="{{ '/research/' | relative_url }}">All {{ site.research.size }} publications</a></p>
+</section>
+
+{%- assign quotes = site.data.testimonials | where: 'featured', true -%}
+{%- if quotes.size > 0 -%}
+<section class="wrap home-block">
+  <div class="block-head">
+    <h2>From students</h2>
+  </div>
+  <div class="quotes">
+    {%- for t in quotes -%}
+    <figure class="quote">
+      <blockquote><p>{{ t.quote }}</p></blockquote>
+      <figcaption>{{ t.from }}</figcaption>
+    </figure>
+    {%- endfor -%}
+  </div>
+  <p><a class="more" href="{{ '/feedback/' | relative_url }}">Read all messages or leave yours</a></p>
+</section>
+{%- endif -%}

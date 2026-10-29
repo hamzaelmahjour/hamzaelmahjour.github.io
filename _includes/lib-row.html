@@ -1,0 +1,33 @@
+{%- comment -%} One row of the Resources page. Params: title, path, folder, type, course, coursename, note {%- endcomment -%}
+{%- assign lr_path = include.path | strip -%}
+{%- if lr_path contains '://' -%}
+  {%- assign lr_url = lr_path -%}{%- assign lr_abs = lr_path -%}{%- assign lr_ext = 'lien' -%}
+{%- else -%}
+  {%- assign lr_first = lr_path | slice: 0 -%}
+  {%- if lr_first == '/' -%}{%- assign lr_rel = lr_path -%}{%- else -%}{%- assign lr_rel = include.folder | append: lr_path -%}{%- endif -%}
+  {%- assign lr_url = lr_rel | relative_url -%}{%- assign lr_abs = lr_rel | absolute_url -%}
+  {%- assign lr_last = lr_path | split: '/' | last -%}
+  {%- if lr_last contains '.' -%}{%- assign lr_ext = lr_last | split: '.' | last | downcase -%}{%- else -%}{%- assign lr_ext = 'page' -%}{%- endif -%}
+{%- endif -%}
+{%- case include.type -%}
+  {%- when 'notes' -%}{%- assign lr_icon = 'fa-solid fa-book' -%}{%- assign lr_tname = 'Notes de cours' -%}
+  {%- when 'slides' -%}{%- assign lr_icon = 'fa-solid fa-person-chalkboard' -%}{%- assign lr_tname = 'Cours' -%}
+  {%- when 'td' -%}{%- assign lr_icon = 'fa-solid fa-pencil' -%}{%- assign lr_tname = 'TD' -%}
+  {%- when 'correction' -%}{%- assign lr_icon = 'fa-solid fa-check-double' -%}{%- assign lr_tname = 'Corrigé' -%}
+  {%- when 'exam' -%}{%- assign lr_icon = 'fa-solid fa-file-signature' -%}{%- assign lr_tname = 'Examen' -%}
+  {%- when 'quiz' -%}{%- assign lr_icon = 'fa-solid fa-list-check' -%}{%- assign lr_tname = 'Quiz' -%}
+  {%- when 'livre' -%}{%- assign lr_icon = 'fa-solid fa-book-open' -%}{%- assign lr_tname = 'Livre' -%}
+  {%- when 'video' -%}{%- assign lr_icon = 'fa-solid fa-play' -%}{%- assign lr_tname = 'Vidéo' -%}
+  {%- when 'article' -%}{%- assign lr_icon = 'fa-regular fa-newspaper' -%}{%- assign lr_tname = 'Article' -%}
+  {%- else -%}{%- assign lr_icon = 'fa-solid fa-link' -%}{%- assign lr_tname = 'Lien' -%}
+{%- endcase -%}
+<li class="lib-row" data-type="{{ include.type }}" data-search="{{ include.title | append: ' ' | append: include.coursename | append: ' ' | append: lr_tname | append: ' ' | append: include.note | downcase | escape }}">
+  <span class="lib-icon"><i class="{{ lr_icon }}" aria-hidden="true"></i></span>
+  <span class="lib-main">
+    <a href="{{ lr_url }}"{% if lr_ext != 'page' %} target="_blank" rel="noopener"{% endif %}>{{ include.title }}</a>
+    <span class="lib-meta">{{ lr_tname }}{% if lr_ext != 'lien' and lr_ext != 'html' and lr_ext != 'page' %}, {{ lr_ext | upcase }}{% endif %}{% if include.note %}. {{ include.note }}{% endif %}</span>
+  </span>
+  <button class="share-btn" type="button" data-share-url="{{ lr_abs }}" data-share-title="{{ include.title | escape }}">
+    <i class="fa-solid fa-share-nodes" aria-hidden="true"></i><span class="sr-only">Partager le lien</span>
+  </button>
+</li>

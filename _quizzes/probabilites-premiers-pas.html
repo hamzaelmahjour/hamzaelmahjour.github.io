@@ -1,0 +1,57 @@
+---
+title: "Probabilités : premiers pas"
+course: proba
+description: "Indépendance, probabilités conditionnelles, formule de Bayes et dénombrement."
+---
+% ───────────────────────────────────────────────────────────────
+%  Lines starting with % are comments: students never see them.
+%  ?  question       +  correct choice     -  wrong choice
+%  =  math answer    ~  text answer        !  hint      >  explanation
+%  Read GUIDE.md for all the details.
+% ───────────────────────────────────────────────────────────────
+
+Huit questions courtes. Vérifiez chaque réponse : la correction s'affiche aussitôt.
+
+? Soient $A$ et $B$ deux événements indépendants. Que vaut $P(A\cap B)$ ?
+- $P(A)+P(B)$
++ $P(A)\,P(B)$
+- $P(A\mid B)$
+- $0$
+> C'est la définition de l'indépendance : $P(A\cap B)=P(A)\,P(B)$.
+
+? On lance deux dés équilibrés. Quelle est la probabilité que la somme des faces soit égale à $7$ ?
+= 1/6
+! Comptez les couples $(i,j)$ tels que $i+j=7$ parmi les $36$ couples possibles.
+> Les couples favorables sont $(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)$ : $\dfrac{6}{36}=\dfrac{1}{6}$.
+
+? On sait que $P(A)=0{,}4$ et $P(B\mid A)=0{,}5$. Calculez $P(A\cap B)$.
+= 0.2
+> $P(A\cap B)=P(A)\,P(B\mid A)=0{,}4\times 0{,}5=0{,}2$.
+
+? Parmi les affirmations suivantes, lesquelles sont **toujours** vraies ?
++ $P(\overline{A})=1-P(A)$
++ $P(A\cup B)=P(A)+P(B)-P(A\cap B)$
+- $P(A\mid B)=P(B\mid A)$
++ Si $A\subset B$, alors $P(A)\le P(B)$
+> La troisième est fausse en général : la formule de Bayes donne $P(A\mid B)=\dfrac{P(B\mid A)\,P(A)}{P(B)}$.
+
+? Une maladie touche $1\,\%$ de la population. Un test détecte la maladie chez $99\,\%$ des malades, mais il est aussi positif chez $5\,\%$ des personnes saines.
+Une personne est testée positive. Quelle est la probabilité qu'elle soit malade ?
+= 1/6 ± 0.002
+! Utilisez la formule des probabilités totales pour $P(T)$, puis la formule de Bayes.
+> $P(M\mid T)=\dfrac{0{,}01\times 0{,}99}{0{,}01\times 0{,}99+0{,}99\times 0{,}05}=\dfrac{0{,}0099}{0{,}0594}=\dfrac{1}{6}\approx 0{,}167$.
+> Moins d'une chance sur cinq : c'est le paradoxe des faux positifs.
+
+? Deux événements incompatibles, de probabilités non nulles, sont indépendants.
+- Vrai
++ Faux
+> S'ils sont incompatibles, $P(A\cap B)=0$, alors que $P(A)\,P(B)>0$.
+
+? Le nombre de succès dans $n$ épreuves de Bernoulli indépendantes de même paramètre $p$ suit une loi… (un mot)
+~ binomiale | loi binomiale | binomial
+> C'est la loi binomiale $\mathcal{B}(n,p)$ : $P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}$.
+
+? Combien d'anagrammes (avec ou sans sens) peut-on former avec les lettres du mot MATHS ?
+= 120
+! Les cinq lettres sont distinctes.
+> Il s'agit des permutations de $5$ lettres distinctes : $5!=120$.
