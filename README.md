@@ -19,7 +19,7 @@ This project and its content (including documents, videos, and media) are licens
 - Videos must not be re-uploaded to YouTube, social media, or other platforms.  
 - Embedding is allowed **only if** it links back to the original source.  
 
-📝 **For commercial use or exceptions**, contact me at [your-email@example.com].  
+📝 **For commercial use or exceptions**, contact me at h.elmahjour@uae.ac.ma].  
 
 ---
 

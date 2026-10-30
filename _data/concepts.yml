@@ -1,0 +1,424 @@
+# Concept catalog used by the quiz diagnosis.
+#
+# In a quiz, tag a question with   @ concept-id   (several ids: @ id1, id2).
+# When a student misses questions, the end of the quiz lists the weak concepts
+# with the links below.
+#
+#   label:  what the student sees
+#   cours:  link to the matching section of your course (#s2 = sequence 2)
+#   links:  external resources. Either a direct  url:  or a  search:  (a Google
+#           search restricted to that site, e.g. Bibmath). To point to an exact
+#           Bibmath page, replace  search: "..."  by  url: "https://www.bibmath.net/..."
+#
+# Exo7 links were taken from Exo7's own sources (github.com/exo7math):
+# chapter PDFs from the cours-exo7 repository, solved exercise sheets (ficpdf)
+# as referenced by the Exo7 chapters themselves.
+
+proba-calcul:
+  label: Règles de calcul des probabilités
+  cours: /teaching/probability/#s1
+  links:
+  - site: Exo7
+    label: 'Exercices corrigés : probabilité et dénombrement'
+    url: http://exo7.emath.fr/ficpdf/fic00150.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: probabilités exercices
+proba-independance:
+  label: Indépendance d'événements
+  cours: /teaching/probability/#s1
+  links:
+  - site: Exo7
+    label: 'Exercices corrigés : probabilité, indépendance'
+    url: http://exo7.emath.fr/ficpdf/fic00150.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: événements indépendants exercices
+proba-conditionnelle:
+  label: Probabilités conditionnelles et formule de Bayes
+  cours: /teaching/probability/#s3
+  links:
+  - site: Exo7
+    label: 'Exercices corrigés : probabilité conditionnelle'
+    url: http://exo7.emath.fr/ficpdf/fic00151.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: probabilités conditionnelles formule de Bayes exercices
+denombrement:
+  label: Dénombrement
+  cours: /teaching/probability/#s2
+  links:
+  - site: Exo7
+    label: 'Exercices corrigés : dénombrement'
+    url: http://exo7.emath.fr/ficpdf/fic00005.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: dénombrement exercices
+lois-discretes:
+  label: Variables aléatoires et lois usuelles
+  cours: /teaching/probability/#s4
+  links:
+  - site: Exo7
+    label: 'Exercices corrigés : variables aléatoires discrètes'
+    url: http://exo7.emath.fr/ficpdf/fic00152.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: loi binomiale exercices
+intervalles:
+  label: Ensembles et intervalles
+  cours: /teaching/math_eco/#s1
+  links:
+  - site: Exo7
+    label: 'Cours : ensembles et applications'
+    url: https://github.com/exo7math/cours-exo7/blob/master/ensembles/ch_ensembles.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : logique, ensembles'
+    url: http://exo7.emath.fr/ficpdf/fic00002.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: intervalles ensembles exercices
+fonctions-generalites:
+  label: 'Fonctions : domaine de définition, lecture graphique'
+  cours: /teaching/math_eco/#s2
+  links:
+  - site: Exo7
+    label: 'Cours : limites et fonctions continues'
+    url: https://github.com/exo7math/cours-exo7/blob/master/fonctions/ch_fonctions.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: domaine de définition fonction exercices
+limites:
+  label: Calcul de limites
+  cours: /teaching/math_eco/#s3
+  links:
+  - site: Exo7
+    label: 'Cours : limites et fonctions continues'
+    url: https://github.com/exo7math/cours-exo7/blob/master/fonctions/ch_fonctions.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : limites de fonctions'
+    url: http://exo7.emath.fr/ficpdf/fic00011.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: calcul de limites exercices
+derivation:
+  label: Calcul de dérivées
+  cours: /teaching/math_eco/#s2
+  links:
+  - site: Exo7
+    label: 'Cours : dérivée d''une fonction'
+    url: https://github.com/exo7math/cours-exo7/blob/master/derivee/ch_derivee.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : fonctions dérivables'
+    url: http://exo7.emath.fr/ficpdf/fic00013.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: calcul de dérivées exercices
+rolle:
+  label: Théorème de Rolle et accroissements finis
+  cours: /teaching/math_eco/#s2
+  links:
+  - site: Exo7
+    label: 'Cours : dérivée d''une fonction (Rolle)'
+    url: https://github.com/exo7math/cours-exo7/blob/master/derivee/ch_derivee.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : théorème des accroissements finis'
+    url: http://exo7.emath.fr/ficpdf/fic00048.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: théorème de Rolle exercices
+primitives:
+  label: Primitives
+  cours: /teaching/math_eco/#s4
+  links:
+  - site: Exo7
+    label: 'Cours : intégrales'
+    url: https://github.com/exo7math/cours-exo7/blob/master/int/ch_int.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : calculs de primitives et d''intégrales'
+    url: http://exo7.emath.fr/ficpdf/fic00108.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: calcul de primitives exercices
+integrale-calcul:
+  label: Calcul d'intégrales
+  cours: /teaching/math_eco/#s4
+  links:
+  - site: Exo7
+    label: 'Cours : intégrales'
+    url: https://github.com/exo7math/cours-exo7/blob/master/int/ch_int.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : calculs d''intégrales'
+    url: http://exo7.emath.fr/ficpdf/fic00015.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: calcul d'intégrales exercices
+integrale-proprietes:
+  label: 'Propriétés de l''intégrale : linéarité, parité'
+  cours: /teaching/math_eco/#s4
+  links:
+  - site: Exo7
+    label: 'Cours : intégrales'
+    url: https://github.com/exo7math/cours-exo7/blob/master/int/ch_int.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : calculs d''intégrales'
+    url: http://exo7.emath.fr/ficpdf/fic00015.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: propriétés intégrale exercices
+integrale-definition:
+  label: Intégrale définie, indéfinie, intégrabilité
+  cours: /teaching/math_eco/#s4
+  links:
+  - site: Exo7
+    label: 'Cours : intégrales'
+    url: https://github.com/exo7math/cours-exo7/blob/master/int/ch_int.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: intégrale de Riemann fonction intégrable
+integrales-impropres:
+  label: Intégrales impropres (généralisées)
+  cours: /teaching/math_eco/#s5
+  links:
+  - site: Exo7
+    label: 'Cours : intégrales impropres'
+    url: https://github.com/exo7math/cours-exo7/blob/master/intimp/ch_intimp.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: intégrales impropres généralisées exercices
+derivees-partielles:
+  label: Dérivées partielles
+  cours: /teaching/math_eco/#s6
+  links:
+  - site: Exo7
+    label: 'Cours : fonctions de plusieurs variables'
+    url: https://github.com/exo7math/cours-exo7/blob/master/fpv/ch_plusvar.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : fonctions de plusieurs variables'
+    url: http://exo7.emath.fr/ficpdf/fic00116.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: dérivées partielles exercices
+sous-espaces:
+  label: Sous-espaces vectoriels
+  cours: /teaching/algebra-2/#s1
+  links:
+  - site: Exo7
+    label: 'Cours : espaces vectoriels'
+    url: https://github.com/exo7math/cours-exo7/blob/master/ev/ch_ev.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : espaces vectoriels'
+    url: http://exo7.emath.fr/ficpdf/fic00017.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: sous-espaces vectoriels exercices
+familles-libres:
+  label: Familles libres, liées, génératrices
+  cours: /teaching/algebra-2/#s1
+  links:
+  - site: Exo7
+    label: 'Cours : dimension finie'
+    url: https://github.com/exo7math/cours-exo7/blob/master/dimension/ch_dimension.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : espaces vectoriels de dimension finie'
+    url: http://exo7.emath.fr/ficpdf/fic00019.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: famille libre liée génératrice exercices
+dimension:
+  label: Dimension et formule de Grassmann
+  cours: /teaching/algebra-2/#s1
+  links:
+  - site: Exo7
+    label: 'Cours : dimension finie'
+    url: https://github.com/exo7math/cours-exo7/blob/master/dimension/ch_dimension.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : espaces vectoriels de dimension finie'
+    url: http://exo7.emath.fr/ficpdf/fic00019.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: dimension espace vectoriel exercices
+vect:
+  label: Sous-espace engendré (Vect)
+  cours: /teaching/algebra-2/#s2
+  links:
+  - site: Exo7
+    label: 'Cours : espaces vectoriels'
+    url: https://github.com/exo7math/cours-exo7/blob/master/ev/ch_ev.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : espaces vectoriels'
+    url: http://exo7.emath.fr/ficpdf/fic00017.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: sous-espace engendré Vect exercices
+rang:
+  label: Rang d'une famille de vecteurs
+  cours: /teaching/algebra-2/#s2
+  links:
+  - site: Exo7
+    label: 'Cours : matrices et applications linéaires (rang)'
+    url: https://github.com/exo7math/cours-exo7/blob/master/matlin/ch_matlin.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : espaces vectoriels de dimension finie'
+    url: http://exo7.emath.fr/ficpdf/fic00019.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: rang d'une famille de vecteurs exercices
+bases-coordonnees:
+  label: Bases et coordonnées
+  cours: /teaching/algebra-2/#s2
+  links:
+  - site: Exo7
+    label: 'Cours : dimension finie'
+    url: https://github.com/exo7math/cours-exo7/blob/master/dimension/ch_dimension.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : espaces vectoriels de dimension finie'
+    url: http://exo7.emath.fr/ficpdf/fic00019.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: base coordonnées espace vectoriel exercices
+applications-lineaires:
+  label: Applications linéaires
+  cours: /teaching/algebra-2/#s3
+  links:
+  - site: Exo7
+    label: 'Cours : espaces vectoriels et applications linéaires'
+    url: https://github.com/exo7math/cours-exo7/blob/master/ev/ch_ev.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : applications linéaires'
+    url: http://exo7.emath.fr/ficpdf/fic00018.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: applications linéaires exercices
+noyau-image:
+  label: Noyau, image et théorème du rang
+  cours: /teaching/algebra-2/#s3
+  links:
+  - site: Exo7
+    label: 'Cours : applications linéaires en dimension finie'
+    url: https://github.com/exo7math/cours-exo7/blob/master/matlin/ch_matlin.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : applications linéaires'
+    url: http://exo7.emath.fr/ficpdf/fic00018.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: noyau image théorème du rang exercices
+matrices:
+  label: Matrice d'une application linéaire
+  cours: /teaching/algebra-2/#s3
+  links:
+  - site: Exo7
+    label: 'Cours : matrice d''une application linéaire'
+    url: https://github.com/exo7math/cours-exo7/blob/master/matlin/ch_matlin.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : matrice d''une application linéaire'
+    url: http://exo7.emath.fr/ficpdf/fic00162.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: matrice d'une application linéaire exercices
+determinant-inverse:
+  label: Déterminant et inverse d'une matrice
+  cours: /teaching/algebra-2/#s3
+  links:
+  - site: Exo7
+    label: 'Cours : déterminants'
+    url: https://github.com/exo7math/cours-exo7/blob/master/determinants/ch_determinants.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : calculs de déterminants'
+    url: http://exo7.emath.fr/ficpdf/fic00161.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : calculs sur les matrices'
+    url: http://exo7.emath.fr/ficpdf/fic00157.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: déterminant inverse matrice exercices
+polynome-caracteristique:
+  label: Polynôme caractéristique
+  cours: /teaching/algebra-3/#s1
+  links:
+  - site: Exo7
+    label: 'Cours : valeurs propres, vecteurs propres'
+    url: https://github.com/exo7math/cours-exo7/blob/master/reduc/ch_vp.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : vecteurs propres et valeurs propres'
+    url: http://exo7.emath.fr/ficpdf/fic00072.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: polynôme caractéristique exercices
+valeurs-propres:
+  label: Valeurs propres
+  cours: /teaching/algebra-3/#s1
+  links:
+  - site: Exo7
+    label: 'Cours : valeurs propres, vecteurs propres'
+    url: https://github.com/exo7math/cours-exo7/blob/master/reduc/ch_vp.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : vecteurs propres et valeurs propres'
+    url: http://exo7.emath.fr/ficpdf/fic00072.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: valeurs propres exercices
+vecteurs-propres:
+  label: Vecteurs propres et sous-espaces propres
+  cours: /teaching/algebra-3/#s1
+  links:
+  - site: Exo7
+    label: 'Cours : valeurs propres, vecteurs propres'
+    url: https://github.com/exo7math/cours-exo7/blob/master/reduc/ch_vp.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : vecteurs propres et valeurs propres'
+    url: http://exo7.emath.fr/ficpdf/fic00072.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: vecteurs propres sous-espaces propres exercices
+diagonalisation:
+  label: Critères de diagonalisabilité
+  cours: /teaching/algebra-3/#s2
+  links:
+  - site: Exo7
+    label: 'Cours : diagonalisation'
+    url: https://github.com/exo7math/cours-exo7/blob/master/reduc/ch_diagon.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : réduction (J.-L. Rouget)'
+    url: http://exo7.emath.fr/ficpdf/fic00121.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: diagonalisation exercices
+diagonalisation-pratique:
+  label: 'Diagonaliser en pratique : P, D et puissances de A'
+  cours: /teaching/algebra-3/#s2
+  links:
+  - site: Exo7
+    label: 'Cours : diagonalisation'
+    url: https://github.com/exo7math/cours-exo7/blob/master/reduc/ch_diagon.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : réduction (J.-L. Rouget)'
+    url: http://exo7.emath.fr/ficpdf/fic00121.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: diagonaliser une matrice puissance n exercices
+trigonalisation:
+  label: Trigonalisation
+  cours: /teaching/algebra-3/#s3
+  links:
+  - site: Exo7
+    label: 'Cours : trigonalisation et réduction de Jordan'
+    url: https://github.com/exo7math/cours-exo7/blob/master/reduc/ch_jordan.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : réduction (J.-L. Rouget)'
+    url: http://exo7.emath.fr/ficpdf/fic00121.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: trigonalisation exercices
+cayley-hamilton:
+  label: Théorème de Cayley-Hamilton
+  cours: /teaching/algebra-3/#s3
+  links:
+  - site: Exo7
+    label: 'Cours : polynômes d''endomorphismes, Cayley-Hamilton'
+    url: https://github.com/exo7math/cours-exo7/blob/master/reduc/ch_polyendo.pdf
+  - site: Exo7
+    label: 'Exercices corrigés : réduction (J.-L. Rouget)'
+    url: http://exo7.emath.fr/ficpdf/fic00121.pdf
+  - site: Bibmath
+    label: Exercices corrigés
+    search: théorème de Cayley-Hamilton exercices

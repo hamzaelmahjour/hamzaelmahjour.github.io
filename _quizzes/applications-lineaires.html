@@ -9,11 +9,13 @@ description: "Linéarité, noyau, image, théorème du rang, matrices et déterm
 - $f(x,y)=(xy,\ x)$
 - $f(x,y)=(x^2,\ y)$
 > Seule la première vérifie $f(\lambda u+v)=\lambda f(u)+f(v)$. Un test rapide : une application linéaire envoie $0$ sur $0$, ce qui élimine $(x+1,y)$.
+@ applications-lineaires
 
 ? Soit $f:\mathbb{R}^3\to\mathbb{R}^2$, $f(x,y,z)=(x+y,\ y+z)$. Quelle est la dimension de $\ker f$ ?
 = 1
 ! Utilisez le théorème du rang : $\dim\ker f+\operatorname{rg} f=3$.
 > La matrice $\begin{pmatrix}1&1&0\\0&1&1\end{pmatrix}$ est de rang $2$, donc $\dim\ker f=3-2=1$.
+@ noyau-image
 
 ? Avec la même application $f(x,y,z)=(x+y,\ y+z)$, on a $\ker f=$
 + $\operatorname{Vect}\big((1,-1,1)\big)$
@@ -21,14 +23,17 @@ description: "Linéarité, noyau, image, théorème du rang, matrices et déterm
 - $\operatorname{Vect}\big((1,0,-1)\big)$
 - $\{0\}$
 > $x+y=0$ et $y+z=0$ donnent $y=-x$ et $z=x$ : $\ker f=\{(x,-x,x)\}=\operatorname{Vect}\big((1,-1,1)\big)$.
+@ noyau-image
 
 ? Une application linéaire $f:\mathbb{R}^5\to\mathbb{R}^3$ est surjective. Quelle est la dimension de son noyau ?
 = 2
 > Surjective : $\operatorname{rg} f=3$. Théorème du rang : $\dim\ker f=5-3=2$.
+@ noyau-image
 
 ? Soit $g:\mathbb{R}^2\to\mathbb{R}^3$, $g(x,y)=(x-y,\ 2x-2y,\ 0)$. Quel est le rang de $g$ ?
 = 1
 > Les colonnes $(1,2,0)$ et $(-1,-2,0)$ de sa matrice sont colinéaires : $\operatorname{rg} g=1$.
+@ noyau-image
 
 ? Quelle est la matrice dans la base canonique de $f(x,y)=(x+2y,\ 3x-y)$ ?
 + $\begin{pmatrix}1&2\\3&-1\end{pmatrix}$
@@ -36,10 +41,12 @@ description: "Linéarité, noyau, image, théorème du rang, matrices et déterm
 - $\begin{pmatrix}2&1\\-1&3\end{pmatrix}$
 - $\begin{pmatrix}1&2\\-1&3\end{pmatrix}$
 > Les colonnes sont les images des vecteurs de base : $f(1,0)=(1,3)$ et $f(0,1)=(2,-1)$.
+@ matrices
 
 ? Calculez $\det\begin{pmatrix}2&1\\3&4\end{pmatrix}$.
 = 5
 > $2\times 4-1\times 3=5$.
+@ determinant-inverse
 
 ? L'inverse de $A=\begin{pmatrix}2&1\\1&1\end{pmatrix}$ est…
 + $\begin{pmatrix}1&-1\\-1&2\end{pmatrix}$
@@ -47,13 +54,16 @@ description: "Linéarité, noyau, image, théorème du rang, matrices et déterm
 - $\begin{pmatrix}-1&1\\1&-2\end{pmatrix}$
 - $A$ n'est pas inversible
 > $\det A=1$, et $\begin{pmatrix}a&b\\c&d\end{pmatrix}^{-1}=\dfrac{1}{ad-bc}\begin{pmatrix}d&-b\\-c&a\end{pmatrix}$.
+@ determinant-inverse
 
 ? Un endomorphisme injectif d'un espace vectoriel de dimension finie est bijectif.
 + Vrai
 - Faux
 > Injectif : $\ker f=\{0\}$. Le théorème du rang donne $\operatorname{rg} f=\dim E$, donc $f$ est aussi surjectif.
+@ noyau-image
 
 ? Il existe une application linéaire injective de $\mathbb{R}^3$ dans $\mathbb{R}^2$.
 - Vrai
 + Faux
 > Le rang est au plus $2$, donc $\dim\ker f\ge 3-2=1$ : le noyau n'est jamais réduit à $\{0\}$.
+@ noyau-image

@@ -7,11 +7,13 @@ description: "Critères de diagonalisabilité, calcul de P et D, puissances de m
 + Vrai
 - Faux
 > Des vecteurs propres associés à des valeurs propres distinctes forment une famille libre : on obtient $n$ vecteurs propres indépendants, donc une base de vecteurs propres.
+@ diagonalisation
 
 ? La matrice $\begin{pmatrix}2&1\\0&2\end{pmatrix}$ est diagonalisable.
 - Vrai
 + Faux
 > Sa seule valeur propre est $2$, de multiplicité $2$, mais $\dim E_2=1$. Si elle était diagonalisable, elle serait semblable à $2I$, donc égale à $2I$.
+@ diagonalisation
 
 ? $A\in\mathcal{M}_n(\mathbb{K})$ est diagonalisable sur $\mathbb{K}$ si et seulement si…
 + $\chi_A$ est scindé sur $\mathbb{K}$ et $\dim E_\lambda$ est égale à la multiplicité de $\lambda$ pour chaque valeur propre $\lambda$
@@ -19,6 +21,7 @@ description: "Critères de diagonalisabilité, calcul de P et D, puissances de m
 - $A$ est inversible
 - $A$ a au moins une valeur propre
 > Le polynôme scindé ne suffit pas (voir $\begin{pmatrix}2&1\\0&2\end{pmatrix}$), et l'inversibilité n'a aucun rapport : $\begin{pmatrix}0&0\\0&1\end{pmatrix}$ est diagonale sans être inversible.
+@ diagonalisation
 
 ? Lesquelles de ces matrices sont diagonalisables sur $\mathbb{R}$ ?
 + $\begin{pmatrix}1&0\\0&2\end{pmatrix}$
@@ -27,10 +30,12 @@ description: "Critères de diagonalisabilité, calcul de P et D, puissances de m
 - $\begin{pmatrix}3&1\\0&3\end{pmatrix}$
 + $\begin{pmatrix}1&1\\0&2\end{pmatrix}$
 > La première est déjà diagonale ; la deuxième est symétrique réelle ; la dernière a deux valeurs propres distinctes ($1$ et $2$). La rotation $\begin{pmatrix}0&-1\\1&0\end{pmatrix}$ a $\chi(x)=x^2+1$, sans racine réelle ; $\begin{pmatrix}3&1\\0&3\end{pmatrix}$ a $\dim E_3=1<2$.
+@ diagonalisation
 
 ? Soit $A=\begin{pmatrix}1&2\\2&1\end{pmatrix}=PDP^{-1}$ avec $D=\begin{pmatrix}\lambda_1&0\\0&\lambda_2\end{pmatrix}$ et $\lambda_1>\lambda_2$. Donnez $(\lambda_1\,;\,\lambda_2)$.
 = (3 ; -1)
 > $\chi_A(x)=x^2-2x-3=(x-3)(x+1)$, donc $\lambda_1=3$ et $\lambda_2=-1$.
+@ diagonalisation-pratique
 
 ? Avec la même matrice $A$ et $D=\begin{pmatrix}3&0\\0&-1\end{pmatrix}$, quelle matrice $P$ convient ?
 + $\begin{pmatrix}1&1\\1&-1\end{pmatrix}$
@@ -38,21 +43,26 @@ description: "Critères de diagonalisabilité, calcul de P et D, puissances de m
 - $\begin{pmatrix}1&0\\0&1\end{pmatrix}$
 - $\begin{pmatrix}2&1\\1&2\end{pmatrix}$
 > Les colonnes de $P$ sont des vecteurs propres, dans l'ordre de $D$ : $(1,1)$ pour $3$, puis $(1,-1)$ pour $-1$.
+@ diagonalisation-pratique
 
 ? Toujours avec $A=\begin{pmatrix}1&2\\2&1\end{pmatrix}$, donnez le coefficient en haut à gauche de $A^n$ en fonction de $n$.
 = (3^n + (-1)^n)/2
 ! $A^n=PD^nP^{-1}$ avec $P=\begin{pmatrix}1&1\\1&-1\end{pmatrix}$ et $P^{-1}=\frac12\begin{pmatrix}1&1\\1&-1\end{pmatrix}$.
 > $A^n=\dfrac12\begin{pmatrix}3^n+(-1)^n&3^n-(-1)^n\\3^n-(-1)^n&3^n+(-1)^n\end{pmatrix}$. Vérification : pour $n=1$ on retrouve $\frac{3-1}{2}=1$.
+@ diagonalisation-pratique
 
 ? $A\in\mathcal{M}_3(\mathbb{R})$ est diagonalisable, de valeurs propres $2$ (double) et $5$. Calculez $\det A$.
 = 20
 > $\det A=\det D=2\times 2\times 5=20$. De même, $\operatorname{tr}A=2+2+5=9$.
+@ diagonalisation-pratique
 
 ? Soit $A\in\mathcal{M}_3(\mathbb{R})$ avec $\chi_A(x)=(x-1)^2(x-3)$. Pour que $A$ soit diagonalisable, quelle doit être la dimension de $E_1$ ?
 = 2
 > $\chi_A$ est scindé ; il faut que chaque sous-espace propre ait pour dimension la multiplicité de la valeur propre : $\dim E_1=2$ (et $\dim E_3=1$, automatiquement).
+@ diagonalisation
 
 ? Toute matrice symétrique réelle est diagonalisable.
 + Vrai
 - Faux
 > C'est le théorème spectral : elle est même diagonalisable dans une base orthonormée.
+@ diagonalisation
