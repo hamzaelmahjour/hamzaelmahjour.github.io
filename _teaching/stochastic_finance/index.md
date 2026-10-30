@@ -1,7 +1,7 @@
 ---
 title: "Calcul Stochastique : Théorie et Applications"
 code: stochastique
-order: 4
+order: 6
 permalink: /teaching/stochastic_finance/
 summary: "Espérance conditionnelle, martingales, mouvement brownien, calcul d'Itô et finance stochastique."
 folder: /assets/resources/finance/

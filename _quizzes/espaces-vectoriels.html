@@ -1,0 +1,58 @@
+---
+title: "Espaces vectoriels et familles de vecteurs"
+course: algebre2
+description: "Sous-espaces vectoriels, dimension, familles libres et liées."
+---
+? Laquelle de ces parties de $\mathbb{R}^3$ est un sous-espace vectoriel ?
++ $\{(x,y,z)\in\mathbb{R}^3 \;;\; x+y+z=0\}$
+- $\{(x,y,z)\in\mathbb{R}^3 \;;\; x+y+z=1\}$
+- $\{(x,y,z)\in\mathbb{R}^3 \;;\; xy=0\}$
+- $\{(x,y,z)\in\mathbb{R}^3 \;;\; x\ge 0\}$
+> Seule la première contient $0$ et est stable par combinaison linéaire (c'est le noyau d'une forme linéaire). La deuxième ne contient pas $0$ ; la troisième n'est pas stable par somme : $(1,0,0)+(0,1,0)$ ; la quatrième n'est pas stable par multiplication par $-1$.
+
+? Parmi ces parties de $\mathbb{R}^2$, lesquelles sont des sous-espaces vectoriels ?
++ $\{(0,0)\}$
++ $\{(x,y)\in\mathbb{R}^2 \;;\; y=3x\}$
+- $\{(x,y)\in\mathbb{R}^2 \;;\; y=x^2\}$
+- $\{(x,y)\in\mathbb{R}^2 \;;\; x^2+y^2\le 1\}$
+> $\{0\}$ et la droite $y=3x$ sont des sous-espaces. La parabole n'est pas stable par somme : $(1,1)+(1,1)=(2,2)$ et $2\neq 2^2$. Le disque n'est pas stable par multiplication par un scalaire : $(1,0)\in D$ mais $2\cdot(1,0)\notin D$.
+
+? Quelle est la dimension de $\mathbb{R}_3[X]$, l'espace des polynômes de degré au plus $3$ ?
+= 4
+> La base canonique est $(1, X, X^2, X^3)$ : $\dim\mathbb{R}_3[X]=4$. Plus généralement, $\dim\mathbb{R}_n[X]=n+1$.
+
+? Quelle est la dimension de $\mathcal{M}_{2,3}(\mathbb{R})$ ?
+= 6
+> Les matrices élémentaires $E_{ij}$ ($1\le i\le 2$, $1\le j\le 3$) forment une base : $2\times 3=6$.
+
+? La famille $\big((1,2),(2,4)\big)$ de $\mathbb{R}^2$ est…
+- libre
++ liée
+- une base de $\mathbb{R}^2$
+> $(2,4)=2\,(1,2)$ : les deux vecteurs sont colinéaires, la famille est liée.
+
+? Pour quelle valeur de $a$ la famille $\big((1,a),(2,6)\big)$ est-elle liée ?
+= 3
+! Deux vecteurs de $\mathbb{R}^2$ sont liés si et seulement si leur déterminant est nul.
+> $\begin{vmatrix}1&2\\a&6\end{vmatrix}=6-2a=0 \iff a=3$.
+
+? Quelle est la dimension de $F=\{(x,y,z,t)\in\mathbb{R}^4 \;;\; x+y=0 \text{ et } z-t=0\}$ ?
+= 2
+> $F=\{(x,-x,z,z)\}=\operatorname{Vect}\big((1,-1,0,0),(0,0,1,1)\big)$ : deux équations indépendantes dans $\mathbb{R}^4$, donc $\dim F=4-2=2$.
+
+? Dans $\mathbb{R}^3$, une famille de $4$ vecteurs est toujours liée.
++ Vrai
+- Faux
+> Dans un espace de dimension $n$, une famille libre a au plus $n$ vecteurs.
+
+? La réunion de deux sous-espaces vectoriels est toujours un sous-espace vectoriel.
+- Vrai
++ Faux
+> Contre-exemple dans $\mathbb{R}^2$ : les deux axes. $(1,0)+(0,1)=(1,1)$ n'est sur aucun des deux. (L'intersection, elle, est toujours un sous-espace.)
+
+? Si $F$ et $G$ sont deux sous-espaces de dimension finie, $\dim(F+G)$ est égale à…
+- $\dim F+\dim G$
++ $\dim F+\dim G-\dim(F\cap G)$
+- $\max(\dim F,\dim G)$
+- $\dim F\times\dim G$
+> C'est la formule de Grassmann. On a $\dim(F+G)=\dim F+\dim G$ seulement quand la somme est directe ($F\cap G=\{0\}$).

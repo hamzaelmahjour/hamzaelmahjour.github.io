@@ -1,7 +1,7 @@
 ---
 title: "Mathématiques pour l'Économie"
 code: matheco
-order: 3
+order: 5
 permalink: /teaching/math_eco/
 summary: "Fonctions réelles, limites, intégration, fonctions de plusieurs variables et optimisation."
 level: "Tronc commun Gestion"
@@ -18,11 +18,12 @@ sequences:
     correction: TD/corrige_TD1.pdf
   - title: "Fonctions"
     slides: parts/chapitre01-slides.html
+    quiz: ensembles-intervalles-fonctions
   - title: "Limites et applications"
     slides: parts/calcul_limites.pdf
   - title: "Intégration 1"
     slides: parts/integrales_slides.html
-    quiz: derivees-et-integrales
+    quiz: [integrales-vrai-ou-faux, integrales-vocabulaire, derivees-et-integrales]
   - title: "Intégration 2 : intégrales impropres"
     slides: parts/integrales_impropres.pdf
   - title: "Fonctions de plusieurs variables"
@@ -31,12 +32,6 @@ sequences:
     slides: parts/optimisation_multivariables.pdf
   - title: "Optimisation 2 : multiplicateurs de Lagrange"
     slides: parts/main_function_lagrange.pdf
-
-# Older H5P quizzes (they still work; new quizzes go in the _quizzes folder)
-legacy_quizzes:
-  - { label: "Domaines de définition et intervalles (cartes)", file: QUIZ/entainement01.html }
-  - { label: "Intégrales 1 (vrai ou faux)", file: QUIZ/quiz_integrale01.html }
-  - { label: "Intégrales 2", file: QUIZ/quiz_integrale02.html }
 
 archives:
   - year: "2025"

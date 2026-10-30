@@ -12,8 +12,12 @@
         {%- if s.correction %}{% include res-link.html path=s.correction folder=include.folder label="Corrigé" kind="correction" %}{% endif -%}
         {%- for x in s.extra %}{% include res-link.html path=x.file folder=include.folder label=x.label kind=x.kind %}{% endfor -%}
         {%- if s.quiz -%}
-          {%- assign sq_url = '/quiz/' | append: s.quiz | append: '/' -%}
-          {% include res-link.html path=sq_url label="Quiz" kind="quiz" %}
+          {%- assign sq_list = s.quiz | join: ',' | split: ',' -%}
+          {%- for sq in sq_list -%}
+            {%- assign sq_url = '/quiz/' | append: sq | strip | append: '/' -%}
+            {%- if sq_list.size > 1 %}{% capture sq_label %}Quiz {{ forloop.index }}{% endcapture %}{% else %}{% assign sq_label = 'Quiz' %}{% endif -%}
+            {% include res-link.html path=sq_url label=sq_label kind="quiz" %}
+          {%- endfor -%}
         {%- endif -%}
       </div>
     </div>

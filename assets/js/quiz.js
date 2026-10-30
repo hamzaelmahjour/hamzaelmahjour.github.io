@@ -220,44 +220,112 @@
   }
 
   /* ----- Comparing a student's answer with the expected one ----- */
-  function compileAnswer(raw) {
-    var s = raw.trim(), tol = null, upToConstant = false;
-    var pm = s.split(/±|\+\/-/);
-    if (pm.length > 1) { s = pm[0]; tol = Math.abs(evaluate(parse(pm[1], [], false), {})); }
+  // Split on ";" outside parentheses.
+  function splitTop(str) {
+    var out = [], depth = 0, cur = '';
+    for (var i = 0; i < str.length; i++) {
+      var c = str[i];
+      if (c === '(' || c === '[' || c === '{') depth++;
+      if (c === ')' || c === ']' || c === '}') depth--;
+      if (c === ';' && depth === 0) { out.push(cur); cur = ''; } else cur += c;
+    }
+    out.push(cur);
+    return out.map(function (x) { return x.trim(); });
+  }
+  // "(2 ; 1)" -> ordered tuple, "1 ; 3" or "{1 ; 3}" -> set
+  function unwrapList(str) {
+    var t = str.trim(), m = t.match(/^[\(\[\{]([\s\S]*)[\)\]\}]$/);
+    if (m && splitTop(m[1]).length > 1) return { inner: m[1], bracket: t[0] };
+    return { inner: t, bracket: null };
+  }
+
+  function compileOne(s, tol) {
+    var upToConstant = false;
     if (/\+\s*C\s*$/.test(s)) { upToConstant = true; s = s.replace(/\+\s*C\s*$/, ''); }
     var vars = [];
     var tree = parse(s, vars, true);
     return { tree: tree, vars: vars, tol: tol, upToConstant: upToConstant };
   }
 
+  function compileAnswer(raw) {
+    var s = raw.trim(), tol = null;
+    var pm = s.split(/±|\+\/-/);
+    if (pm.length > 1) { s = pm[0]; tol = Math.abs(evaluate(parse(pm[1], [], false), {})); }
+    var u = unwrapList(s);
+    var parts = splitTop(u.inner);
+    if (parts.length > 1) {
+      return {
+        list: true, ordered: u.bracket === '(',
+        items: parts.map(function (p) { return compileOne(p, tol); })
+      };
+    }
+    return compileOne(s, tol);
+  }
+
+  var INT_VARS = ['n', 'k', 'm', 'p', 'N'];
   function sampleEnvs(vars, count) {
     var envs = [];
     for (var i = 0; i < count; i++) {
       var env = {};
-      vars.forEach(function (v) { env[v] = 0.35 + Math.random() * 2.3; });
+      vars.forEach(function (v) {
+        env[v] = INT_VARS.indexOf(v) !== -1 ? 1 + Math.floor(Math.random() * 9) : 0.35 + Math.random() * 2.3;
+      });
       envs.push(env);
     }
     return envs;
   }
 
-  function checkMath(answer, input) {
-    var s = input;
-    if (answer.upToConstant) s = s.replace(/\+\s*[cCkK]\s*$/, '');
-    var tree = parse(s, answer.vars.slice(), false);
-    if (!answer.vars.length) {
-      var got = evaluate(tree, {}), want = evaluate(answer.tree, {});
+  // Parses what the student typed; throws a readable MathError if it can't be read.
+  function parseStudent(answer, input) {
+    if (!answer.list) {
+      var s = input;
+      if (answer.upToConstant) s = s.replace(/\+\s*[cCkK]\s*$/, '');
+      return parse(s, answer.vars.slice(), false);
+    }
+    var parts = splitTop(unwrapList(input).inner).filter(function (x) { return x !== ''; });
+    var n = answer.items.length;
+    if (parts.length !== n) {
+      throw new MathError('Cette question attend ' + n + ' valeurs séparées par « ; » (vous en avez donné ' + parts.length + ').');
+    }
+    var allVars = [];
+    answer.items.forEach(function (it) { it.vars.forEach(function (v) { if (allVars.indexOf(v) === -1) allVars.push(v); }); });
+    return parts.map(function (p) { return parse(p, allVars.slice(), false); });
+  }
+
+  function sameValue(item, tree) {
+    if (!item.vars.length) {
+      var got = evaluate(tree, {}), want = evaluate(item.tree, {});
       if (!isFinite(got)) return false;
-      var tol = answer.tol !== null ? answer.tol : 1e-9 + 5e-3 * Math.abs(want);
+      var tol = item.tol !== null ? item.tol : 1e-9 + 5e-3 * Math.abs(want);
       return Math.abs(got - want) <= tol + 1e-12;
     }
-    var envs = sampleEnvs(answer.vars, 24), diffs = [];
+    var envs = sampleEnvs(item.vars, 24), diffs = [];
     envs.forEach(function (env) {
-      var g = evaluate(tree, env), w = evaluate(answer.tree, env);
+      var g = evaluate(tree, env), w = evaluate(item.tree, env);
       if (isFinite(g) && isFinite(w)) diffs.push({ d: g - w, w: w });
     });
     if (diffs.length < 4) return false;
-    var ref = answer.upToConstant ? diffs[0].d : 0;
+    var ref = item.upToConstant ? diffs[0].d : 0;
     return diffs.every(function (x) { return Math.abs(x.d - ref) <= 1e-6 * (1 + Math.abs(x.w) + Math.abs(ref)); });
+  }
+
+  function checkMath(answer, input) {
+    var parsed = parseStudent(answer, input);
+    if (!answer.list) return sameValue(answer, parsed);
+    if (answer.ordered) return answer.items.every(function (it, i) { return sameValue(it, parsed[i]); });
+    var used = answer.items.map(function () { return false; });
+    return parsed.every(function (t) {
+      for (var i = 0; i < answer.items.length; i++) {
+        if (!used[i] && sameValue(answer.items[i], t)) { used[i] = true; return true; }
+      }
+      return false;
+    });
+  }
+
+  function answerTex(answer, trees) {
+    if (!answer.list) return tex(trees || answer.tree) + (answer.upToConstant ? '+C' : '');
+    var parts = (trees || answer.items.map(function (it) { return it.tree; })).map(tex).join('\\;;\\;');
+    return answer.ordered ? '\\left(' + parts + '\\right)' : '\\left\\{' + parts + '\\right\\}';
   }
 
   function normText(s) {
@@ -427,7 +495,14 @@
       textInput.setAttribute('autocapitalize', 'off');
       textInput.setAttribute('spellcheck', 'false');
       textInput.setAttribute('aria-label', 'Votre réponse à la question ' + num);
-      textInput.placeholder = q.type === 'math' ? (q.answer.vars.length ? 'Ex. : 2x^2 + 1' : 'Ex. : 1/4 ou 0,25') : 'Votre réponse';
+      textInput.placeholder = q.type !== 'math' ? 'Votre réponse' :
+        q.answer.list ? (q.answer.ordered ? 'Ex. : (2 ; -1)' : 'Ex. : 1 ; 3') :
+        q.answer.vars.length ? 'Ex. : 2x^2 + 1' : 'Ex. : 1/4 ou 0,25';
+      if (q.type === 'math' && q.answer.list) {
+        box.insertBefore(el('p', 'q-help', q.answer.ordered
+          ? 'Donnez ' + q.answer.items.length + ' valeurs dans l’ordre, séparées par un point-virgule « ; ».'
+          : 'Donnez ' + q.answer.items.length + ' valeurs séparées par un point-virgule « ; ». L’ordre n’a pas d’importance.'), null);
+      }
       wrapEl.appendChild(textInput);
       if (q.type === 'math') {
         preview = el('div', 'q-preview'); preview.setAttribute('aria-live', 'polite');
@@ -494,8 +569,7 @@
 
     function expectedHtml() {
       if (q.type === 'math') {
-        var t = tex(q.answer.tree) + (q.answer.upToConstant ? '+C' : '');
-        return '<p>Réponse attendue : $' + t + '$' + (q.answer.upToConstant ? ' (C constante quelconque)' : '') + '</p>';
+        return '<p>Réponse attendue : $' + answerTex(q.answer) + '$' + (q.answer.upToConstant ? ' (C constante quelconque)' : '') + '</p>';
       }
       if (q.type === 'text') return '<p>Réponse attendue : <strong>' + esc(q.words[0]) + '</strong></p>';
       return '';
@@ -575,11 +649,9 @@
   function renderPreview(q, value, preview) {
     if (!value.trim()) { preview.innerHTML = ''; preview.className = 'q-preview'; return; }
     try {
-      var s = value;
-      if (q.answer.upToConstant) s = s.replace(/\+\s*[cCkK]\s*$/, '');
-      var tree = parse(s, q.answer.vars.slice(), false);
+      var trees = parseStudent(q.answer, value);
       preview.className = 'q-preview';
-      preview.innerHTML = 'Compris comme : \\(' + tex(tree) + '\\)';
+      preview.innerHTML = 'Compris comme : \\(' + answerTex(q.answer.list ? q.answer : { tree: trees }, q.answer.list ? trees : null) + '\\)';
       typeset(preview);
     } catch (e) {
       preview.className = 'q-preview is-error';
@@ -629,7 +701,7 @@
   }
 
   // Exposed for testing in the browser console
-  window.QuizEngine = { parse: parse, evaluate: evaluate, tex: tex, compileAnswer: compileAnswer, checkMath: checkMath, parseQuiz: parseQuiz, normText: normText };
+  window.QuizEngine = { parseStudent: parseStudent, answerTex: answerTex, parse: parse, evaluate: evaluate, tex: tex, compileAnswer: compileAnswer, checkMath: checkMath, parseQuiz: parseQuiz, normText: normText };
 
   build();
 })();

@@ -1,0 +1,56 @@
+---
+title: "Trigonalisation et théorème de Cayley-Hamilton"
+course: algebre3
+description: "Matrices trigonalisables, réduction d'une matrice 2×2 non diagonalisable, Cayley-Hamilton."
+---
+Convention : $\chi_A(x)=\det(xI_n-A)$.
+
+? Toute matrice de $\mathcal{M}_n(\mathbb{C})$ est trigonalisable.
++ Vrai
+- Faux
+> Sur $\mathbb{C}$, tout polynôme est scindé (théorème de d'Alembert-Gauss), donc $\chi_A$ l'est.
+
+? $A\in\mathcal{M}_n(\mathbb{R})$ est trigonalisable sur $\mathbb{R}$ si et seulement si…
++ $\chi_A$ est scindé sur $\mathbb{R}$
+- $A$ est diagonalisable
+- $A$ est inversible
+- $A$ est symétrique
+> C'est le critère de trigonalisation. Toute matrice diagonalisable est trigonalisable, mais la réciproque est fausse.
+
+? La matrice $\begin{pmatrix}0&-1\\1&0\end{pmatrix}$ est trigonalisable sur $\mathbb{R}$.
+- Vrai
++ Faux
+> $\chi(x)=x^2+1$ n'a pas de racine réelle. Elle est en revanche diagonalisable sur $\mathbb{C}$, de valeurs propres $i$ et $-i$.
+
+? Soit $A=\begin{pmatrix}3&1\\-1&1\end{pmatrix}$. Quelle est son unique valeur propre ?
+= 2
+> $\operatorname{tr}A=4$ et $\det A=3+1=4$ : $\chi_A(x)=x^2-4x+4=(x-2)^2$.
+
+? Cette matrice $A=\begin{pmatrix}3&1\\-1&1\end{pmatrix}$ est diagonalisable.
+- Vrai
++ Faux
+> $A-2I=\begin{pmatrix}1&1\\-1&-1\end{pmatrix}$ est de rang $1$, donc $\dim E_2=1<2$. Elle est seulement trigonalisable.
+
+? Dans la base $v_1=(1,-1)$, $v_2=(1,0)$, la matrice de $A=\begin{pmatrix}3&1\\-1&1\end{pmatrix}$ est $T=\begin{pmatrix}2&b\\0&2\end{pmatrix}$. Que vaut $b$ ?
+= 1
+! Calculez $Av_2$ et écrivez-le comme combinaison de $v_1$ et $v_2$.
+> $Av_1=(2,-2)=2v_1$ et $Av_2=(3,-1)=v_1+2v_2$. La deuxième colonne de $T$ est donc $(1,2)$ : $b=1$.
+
+? $A\in\mathcal{M}_3(\mathbb{C})$ a pour polynôme caractéristique $\chi_A(x)=(x-1)^2(x+2)$. Donnez $(\operatorname{tr}A\,;\,\det A)$.
+= (0 ; -2)
+> $A$ est semblable à une matrice triangulaire de diagonale $(1,1,-2)$ : $\operatorname{tr}A=1+1-2=0$ et $\det A=1\times1\times(-2)=-2$.
+
+? D'après le théorème de Cayley-Hamilton, $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$ vérifie $A^2=\alpha A+\beta I_2$. Donnez $(\alpha\,;\,\beta)$.
+= (5 ; 2)
+> $\chi_A(x)=x^2-5x-2$, et $\chi_A(A)=0$ donne $A^2-5A-2I_2=0$, soit $A^2=5A+2I_2$. On en déduit aussi $A^{-1}=\frac12(A-5I_2)$.
+
+? Une matrice nilpotente non nulle est diagonalisable.
+- Vrai
++ Faux
+> Sa seule valeur propre est $0$ : diagonalisable, elle serait semblable à la matrice nulle, donc nulle.
+
+? Si $A$ est trigonalisable de valeurs propres $\lambda_1,\dots,\lambda_n$ (avec multiplicités), les valeurs propres de $A^k$ sont…
++ $\lambda_1^k,\dots,\lambda_n^k$
+- $k\lambda_1,\dots,k\lambda_n$
+- $\lambda_1+k,\dots,\lambda_n+k$
+> Si $A=PTP^{-1}$ avec $T$ triangulaire, alors $A^k=PT^kP^{-1}$ et $T^k$ est triangulaire de diagonale $(\lambda_1^k,\dots,\lambda_n^k)$.
