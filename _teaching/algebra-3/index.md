@@ -44,8 +44,8 @@ sequences:
 archives:
   - year: "2025"
     files:
-      - { label: "CC1", file: exams/archive/CC1_ALGEBRE3_2025.pdf }
-      - { label: "CC2", file: exams/archive/CC1_ALGEBRE3_2025.pdf }
+      - { label: "Examen 1", file: exams/archive/CC1_ALGEBRE3_2025.pdf }
+      - { label: "Examen 2", file: exams/archive/CC1_ALGEBRE3_2025.pdf }
       - { label: "RATT", file: exams/archive/RATTRAPAGE_ALGEBRE3_2025.pdf }
       - { label: "TD 1", file: TD/old_td/TD01_ALGEBRE3_ENSAT_2526.pdf }
       - { label: "TD 3", file: TD/old_td/TD03_ALGEBRE3_ENSAT_2526.pdf }
