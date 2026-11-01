@@ -5,6 +5,9 @@ order: 3
 permalink: /teaching/algebra-2/
 summary: "Espaces vectoriels, sous-espaces engendrés, bases, applications linéaires et matrices."
 folder: /assets/resources/algebra2/   # create this folder when you add slides or TDs
+level: "AP1 ENSAT PREPA"
+notes:
+  cover: cover-thumb.jpg
 
 sequences:
   - title: "Espaces vectoriels et familles de vecteurs"
