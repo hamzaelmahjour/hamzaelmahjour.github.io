@@ -6,6 +6,9 @@ permalink: /teaching/stochastic_finance/
 summary: "Espérance conditionnelle, martingales, mouvement brownien, calcul d'Itô et finance stochastique."
 folder: /assets/resources/finance/
 
+notes:
+  cover: cover-thumb.jpg
+
 # A course can be split into modules, each with its own list of sequences.
 modules:
   - title: "Théorie de la mesure, espérance conditionnelle et martingales"
