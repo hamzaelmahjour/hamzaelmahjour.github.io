@@ -4,8 +4,12 @@ code: algebre3
 order: 4
 permalink: /teaching/algebra-3/
 summary: "Réduction des endomorphismes : valeurs propres, diagonalisation, trigonalisation."
-level: "AP2 ENSA/ PREPA"
+level: "AP2 ENSAT PREPA"
 folder: /assets/resources/algebra3/   
+
+notes:
+  file: algebra3.pdf
+  cover: cover-thumb.jpg
 
 sequences:
   - title: "Produit Scalaire"
