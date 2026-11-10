@@ -1,5 +1,9 @@
 # Messages left through the feedback form.
 # `featured: true` shows the quote on the home page (keep 2 or 3).
+- quote: I'm one of your former students. You taught us probability in our second year at ENSA Tanger, and I'm now in GINF2. A few days ago some classmates and I were talking about our first years at the school, your name came up, and we remembered you had a website. We looked it up, and I'm really glad we did. We tried some of the quizzes together and had a great time. They were fun, and they were also a good test of how much we still remember (some of it, less than we thought!). The videos impressed me too, especially the Manim ones. "Probability zero and still possible?!" is the kind of idea that's hard to get across on a blackboard, and the animation makes it click. One small suggestion;  the Probabilités et Statistiques course has only one quiz for now. A few more would help current students a lot, and nostalgic former ones like us too.
+Thank you for the effort you put into your teaching and for sharing all of this openly.
+ from: Former Student
+ featured: true
 - quote: I really appreciate your way of teaching. You have a high level of competence, and the way you explain things is very clear. It's easy to follow you lessons, and I always leave the class with a good understanding of the material. Thank you for your efforts.
   from: Former Student
   featured: true
@@ -9,7 +13,6 @@
   from: Visitor
 - quote: Votre manière d’enseigner est vraiment remarquable. Claire, engageante et efficace — on sent votre passion et ça fait toute la différence. Merci pour la qualité de votre travail !
   from: Former Student
-  featured: true
 - quote: Really appreciate the effort behind this site! The content is super helpful and easy to follow. Great resource for students—thank you teacher for sharing it with us!
   from: Former Student
 - quote: J’apprécie énormément la clarté et la pédagogie avec lesquelles les contenus sont présentés. Chaque explication est bien structurée et facile à suivre. Merci pour ce travail de qualité, c’est très utile et enrichissant !
@@ -20,6 +23,7 @@
 - quote: As one of your students, I just wanted to thank you for both your amazing website as well as your teaching. I’ve had a look through your website and it is really well-organized and full of helpful content, which shows how much care and effort you put into your work. As for your teaching, it is incredibly effective. You have a way of explaining things that makes everything easier to understand, and it really shows that you care about your students actually learning. You always make sure we’re following, and that kind of attention makes a big difference. I can honestly say you’re one of the best teachers i’ve ever had. Thank you
   from: Former Student
 - quote: I really appreciate the way you explain things they’re clear and to the point. Your enthusiasm and teaching style are really motivating and make learning exciting. Keep doing what you’re doing, I think you’ll go far. Thanks for everything
+  featured: true
   from: Former Student
 - quote: We appreciate all your efforts and hope you will include more content regarding -Algebre 2- soon
   from: Former Student
