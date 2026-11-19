@@ -68,6 +68,10 @@
       id: "544147404"
       thumbnail: "https://i.vimeocdn.com/video/1126494676-2e27d4325e544803fb6b7fad14f79461fa289d9c87615564aa8c83f20126ed09-d_480x320"
       description: "Calcul de valeurs propres à travers le polynôme caractéristique."
+    - title: "Cône des vecteurs isotropes (flash de lumière)"
+      id : "1248307263"
+      thumbnail: "https://i.vimeocdn.com/video/2228329640-bb527aa92a8082b07ca6bd01165e0cf04f773ccfabe3f7cc2188d0892cbea996-d_640x360"
+      description: "Illustration du cône des vecteurs isotropes qui est une notion mathématique à travers la lumière émise par une lampe"
 
 - category: "Abstract Algebra"
   videos:
